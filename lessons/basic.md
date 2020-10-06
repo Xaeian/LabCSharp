@@ -2,7 +2,46 @@
 Uniwersytet Morski w Gdyni - Emilian Świtalksi
 ---
 
-# Switch...Case
+# 1. Console In..Out
+
+Aplikacja konsolowa umieszczona jest w pewnej przestrzeni nazw `App` związanej z naszym projektem.
+Po odpaleniou aplikacji wykonywana jest funkcja `Main` umieszczona w klacie `Program`.
+
+```c#
+using System;
+
+namespace App
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Guantanamera!");
+    }
+  }
+}
+```
+Jedynym zadaniem naszej aplikacji jest wypisanie tekstu:
+
+    "Guantanamera!"
+
+Z konsoli można także pobierać tekst wprowadzony przez użytkownika. Pozwala to tworzyć nieco bardziej użytkowe aplikacje
+
+```c#
+Console.WriteLine("Jak się nazwywasz?");
+string name = Console.ReadLine();
+Console.WriteLine("Witaj " + age + "!");
+```
+Jednak sytuacja nieco się kompiluje jeżeli chcemy 
+
+
+```c#
+Console.WriteLine("Jak się nazwywasz?");
+string name = int.Parse(Console.ReadLine());
+Console.WriteLine("Your age is: " + age);
+```
+
+# 2. Switch...Case
 
 Instrukcja `switch` stosujemy wówczas gdy chcemy przeskoczyć do odpowiedniego miejsca w kodzie oznaczonego jako `case`
 w zależności od wartości jaką przyjmuje zmienna `option`.
@@ -74,78 +113,15 @@ switch(day)
 }
 ```
 
+# 3. Operatory arytmetyczne
+
+Pobierzmy z konsoli zmienną `a` oraz `b`, a następnie wykonajmy operacje arytmetyczną, którą wskaże użytkownik.
+
 Następna lekcja:
-[If...Else](http://nodeca.github.io/pica/demo/)
+[If...Else](https://github.com/Xaeian/c-hash/blob/main/lessons/3-if-else.md)
 
-
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+# 4. If...Else
 
 
 
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-
-
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-    { some code, part of Definition 2 }
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
+# 5. Typy zmiennych
