@@ -236,18 +236,18 @@ else
 ```
 Operacje porównania można negować, a także z sobą łączyć za pomocą operatorów logicznych:
 
-|   Nazwa        | Operator | Skrót | Przykłady            | Rezultat      |
-|----------------|:--------:|:-----:|----------------------|---------------|
-| Suma logiczna  | `&&`     | AND   | `x > 2 && x <= 5`    | x ∈ ( 2 ; 5 〉 |
-| Większy        | `||`     | OR    | `x <= 2 || x > 5`    | x ∈ ( 2 ; 5 〉 |
-| Równy          | `!`      | NOT   | `!(x > 2 || x <= 5)` | x ∈ ( 2 ; 5 〉 |
+|   Nazwa        | Operator | Skrót | Przykłady              | Rezultat      |
+|----------------|:--------:|:-----:|------------------------|---------------|
+| Suma logiczna  | `&&`     | AND   | `x > 2 && x <= 5`      | x ∈ ( 2 ; 5 〉 |
+| Większy        | `\|\|`   | OR    | `x <= 2 \|\| x > 5`    | x ∈ ( 2 ; 5 〉 |
+| Równy          | `!`      | NOT   | `!(x > 2 \|\| x <= 5)` | x ∈ ( 2 ; 5 〉 |
 |
 
 Zadaniem jakie sobie wysnaczymy będzie obliczenie wartości funkcji w zależności od podanej wartości `x` dla **przebiegu A**
 
 | przebieg A              | przebieg B              |
 |:-----------------------:|:-----------------------:|
-| ![](./img/plot-a.png)    | ![](./img/plot-b.png)  |
+| ![](./img/plot-a.png)   | ![](./img/plot-b.png)   |
 |
 
 ```c#
@@ -264,7 +264,8 @@ else
   y = 2;
 }
 ```
-Jedyne trzeba dopisać:
- + deklaracje zmiennych `x`, `y`
- + pobranie wartości `x` z konsoli
+Jedyne trzeba:
+ + dopisać deklaracje zmiennych `x`, `y`
+ + dodaćpobranie wartości `x` z konsoli
  + Wyświetlenie wartości `y` jako rezultat
+ + Zająć się przebiegiem B
