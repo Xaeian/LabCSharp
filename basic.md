@@ -1,5 +1,5 @@
 ---
-Uniwersytet Morski w Gdyni - Emilian Świtalksi
+Uniwersytet Morski w Gdyni | C# | Podstawy
 ---
 
 # 1. Intro C#
