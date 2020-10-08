@@ -1,0 +1,1 @@
+[datasheet](./datasheet/stm32g0x1.pdf#page=4)

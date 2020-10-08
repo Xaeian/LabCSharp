@@ -1,4 +1,4 @@
-# c-hash
+# UMG Tutorials
 ## Emilian Świtalski
 ### e.switalski@we.umg.edu.pl C41
 
