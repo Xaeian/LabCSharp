@@ -6,7 +6,7 @@ C# | Podstawy
 
 Programowanie w języku **C#** nie wiąże się z koniecznością instalacji platformy **Visual Studio** - jak może się niektórym wydawać. Jej instalacja w celu pisania aplikacji konsolowych *"a tym będziemy się zajmować w tym kursie"* jest po prostu przerostem formy nad treścią.
 
-Jeżeli pracujemy na systemie **Windows** na początku jak przystało na przyszłych pro-programistów ogarnijmy sobie konsole, którą możemy otwierać z dowolnego folderu. Fają opcją jest zainstalowanie sobie [klienta **GIT**](https://git-scm.com/download/win). Ma on wbudowaną konsole, a prędzej czy później będziemy wypadało korzystać  z tego narzędzia.
+Jeżeli pracujemy na systemie **Windows** na początku jak przystało na przyszłych pro-programistów ogarnijmy sobie konsole, którą możemy otwierać z dowolnego folderu. Fają opcją jest zainstalowanie sobie [klienta **GIT**](https://git-scm.com/download/win){:target="_blank"}. Ma on wbudowaną konsole, a prędzej czy później będziemy wypadało korzystać  z tego narzędzia.
 
 Żeby kompilować i uruchamiać kod **C#** musimy mieć zainstalowany pakiet. [**NET Core**](https://dotnet.microsoft.com/download).
 
