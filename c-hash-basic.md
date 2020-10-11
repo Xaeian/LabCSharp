@@ -1,11 +1,57 @@
 ---
-Uniwersytet Morski w Gdyni | C# | Podstawy
+C# | Podstawy
 ---
 
-# 1. Intro C#
+# 1. Intro
+
+Programowanie w języku **C#** nie wiąże się z koniecznością instalacji platformy **Visual Studio** - jak może się niektórym wydawać. Jej instalacja w celu pisania aplikacji konsolowych *"a tym będziemy się zajmować w tym kursie"* jest po prostu przerostem formy nad treścią.
+
+Jeżeli pracujemy na systemie **Windows** na początku jak przystało na przyszłych pro-programistów ogarnijmy sobie konsole, którą możemy otwierać z dowolnego folderu. Fają opcją jest zainstalowanie sobie [klienta **GIT**](https://git-scm.com/download/win). Ma on wbudowaną konsole, a prędzej czy później będziemy wypadało korzystać  z tego narzędzia.
+
+Żeby kompilować i uruchamiać kod **C#** musimy mieć zainstalowany pakiet. [**NET Core**](https://dotnet.microsoft.com/download).
+
+Teraz wystarczy stworzyć folder z nazwą projektu oraz otworzyć w nim konsolę. 
+
+![asd](./image/git-bash.png)
+
+Pozostaje wpisać dwie komendy. Pierwsza z nich tworzy projekt
+
+    dotnet new console
+
+W tym plik `Program.cs` na którym będziemy procować. Możemy otworzyć go notatnikiem, a następnie uruchomić drugą komendę
+
+    dotnet run
+
+Nasz program wyświetli
+
+    Hello World!
+
+Co jak nie trudno się domyśleć spowodowała obecność linijki 
+
+```c#
+Console.WriteLine("Hello World!");
+```
+
+Plik `Program.cs` można edytować nawet za pomocą notatnika, ale można się zamęczyć na śmierć. Idealnym narzędziem do tego jest [**Visual Studio Code**](https://code.visualstudio.com/). Jest to rozbudowany edytor tekstu, który świetnie sprawdza się w edytowaniu *wszystkiego*, wspiera *wszystko*, ma wbudowaną konsolę i jest po prostu genialny.
+
+Polecam podczas instalacji zaznaczyć 2 checkbox-y. Jeden z dodaniem to menu kontekstowego przycisku z otwieraniem plików i folderów w **VSC**, a drugi z otwieraniem wszystkich wspieranych plików domyślnie za pomocą też za jego pomocą.
+
+Jak prosto się domyśleć **VSC** nie *wspiera wszystkiego* tak z bomby. Wówczas instalka ważyłaby 100GB a nie niecałe 100MB. Żeby wygodnie pracować z **C#** musimy zainstalować odpowiednie rozszerzenia:
+
++ **C#** for Visual Studio Code
++ **C# FixFormat**
++ **Code Runner**
+
+Na szczęście nie musimy ich szukać po Internecie. Nasz edytor ma wbudowany menażer rozszerzeń
+
+![](./image/vsc-ext.png)
+
+Najgorsze za nami - mamy już wszystko żeby rozpocząć pracę!
+
+# 2. Input - Output
 
 Aplikacja konsolowa umieszczona jest w pewnej przestrzeni nazw `App` związanej z naszym projektem.
-Po odpaleniou aplikacji wykonywana jest funkcja `Main` umieszczona w klacie `Program`.
+Po odpaleniu aplikacji wykonywana jest funkcja `Main` umieszczona w klacie `Program`.
 
 ```c#
 using System;
@@ -34,7 +80,7 @@ string name = Console.ReadLine();
 Console.WriteLine("Witaj " + age + "!");
 ```
 Niestety, jeżeli chcemy wykorzystać wejściowy ciąg znaków w obliczeniach to będziemy musieli oddać ją konwersji.
-Dzieje się tak dlatego, że wszystko co wprowadza użytkownik początkowo traktowane jest jako 'string'.
+Dzieje się tak dlatego, że wszystko co wprowadza użytkownik początkowo traktowane jest jako `string`.
 
 ```c#
 double tax = 0.18;
@@ -46,14 +92,14 @@ pay = pay * (1 - tax);
 Console.WriteLine("Niestety po odprowadzeniu podatku zostanie ci " + pay + " zł");
 ```
 W przypadku wyświetlenia następuje domyślna konwerersja z `int` na `string`.
-W `C#` przyjęto konwencje, że konwersje związane z utratą danych trzeba wykonać ręcznie,
+W **C#** przyjęto konwencje, że konwersje związane z utratą danych trzeba wykonać ręcznie,
 natomiast w przypadku, gdy nie tracimy danych konwersje wykonywane są automatycznie
 
 Konwersje automatyczne: `char` ⟶ `int` ⟶ `long` ⟶ `double` ⟶ `string`
 
 Konwersje ręczne: `string` ⟶ `double` ⟶ `long` ⟶ `int` ⟶ `char`
 
-# 2. Switch...Case
+# 3. Switch...Case
 
 Instrukcja `switch` stosujemy wówczas gdy chcemy przeskoczyć do odpowiedniego miejsca w kodzie oznaczonego jako `case`
 w zależności od wartości jaką przyjmuje zmienna `option`.
@@ -131,7 +177,7 @@ switch (day)
 }
 ```
 
-# 3. Operatory arytmetyczne
+# 4. Operatory arytmetyczne
 
 Pobierzmy z konsoli zmienną `x` oraz `y`, a następnie wykonajmy operacje arytmetyczną, którą wskaże użytkownik.
 
@@ -188,7 +234,7 @@ double y = double.Parse(Console.ReadLine());
 ```
     Wynik operacji: x / y = 6,666666666666667
 
-# 4. If...Else
+# 5. If...Else
 
 Instrukcja `switch...case` rewelacyjnie sprawdza się przy ograniczonej liczbie opcji. W przypadku, gdy opcji jest więcej, a niekiedy jest ich nieskończenie wiele to z pomocą przychodzi konstrukcja `if...else`
 
@@ -243,7 +289,7 @@ Zadaniem jakie sobie wysnaczymy będzie obliczenie wartości funkcji w zależno�
 
 | przebieg A               | przebieg B               |
 |:------------------------:|:------------------------:|
-| ![](./images/plot-a.png) | ![](./images/plot-b.png) |
+| ![](./image/plot-a.png) | ![](./image/plot-b.png) |
 
 ```c#
 if(x < -2)
