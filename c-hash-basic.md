@@ -298,7 +298,7 @@ if(x < -2)
 }
 else if(x < 1)
 {
-  y = (4 / 3) * x + (2 / 3);
+  y = ((double)4 / 3) * x + ((double)2 / 3);
 }
 else
 {
