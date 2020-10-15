@@ -77,7 +77,7 @@ Z konsoli można także pobierać tekst wprowadzony przez użytkownika. Pozwala 
 Console.Write("Jak się nazwywasz? ");
 string name = Console.ReadLine();
 
-Console.WriteLine("Witaj " + age + "!");
+Console.WriteLine("Witaj " + name + "!");
 ```
 Niestety, jeżeli chcemy wykorzystać wejściowy ciąg znaków w obliczeniach to będziemy musieli oddać ją konwersji.
 Dzieje się tak dlatego, że wszystko co wprowadza użytkownik początkowo traktowane jest jako `string`.
