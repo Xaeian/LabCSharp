@@ -204,8 +204,8 @@ string option = Console.ReadLine();
 switch(option)
 {
   case "+": x = x + y; break;
-  case "-": x = x + y; break;
-  case "*": x = x + y; break;
+  case "-": x = x - y; break;
+  case "*": x = x * y; break;
   case "/": x = x / y; break;
   default: 
     Console.WriteLine("Nieobsługiwana operacja!");
