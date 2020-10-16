@@ -277,7 +277,9 @@ else
   Console.WriteLine("Jeszcze możesz być głupi");
 }
 ```
-Operacje porównania można negować, a także z sobą łączyć za pomocą operatorów logicznych:
+
+Załóżmy, że dla ludzi w wieku **od 2 do 7** lat oraz **od 26 do 30** przysługuje specjalne dofinansowanie.
+Napiszmy program, gdzie podamy nasz wiek i wyświetli się czy dofinansowanie nam przysługuję. Do tego przydadzą nam się dodatkowe operatory logiczne. Za ich pomocą łączyć i negować operacje porównywania
 
 |   Nazwa        | Operator | Skrót | Przykłady              | Rezultat      |
 |----------------|:--------:|:-----:|------------------------|---------------|
@@ -285,11 +287,13 @@ Operacje porównania można negować, a także z sobą łączyć za pomocą oper
 | Większy        | `\|\|`   | OR    | `x <= 2 \|\| x > 5`    | x ∈ ( 2 ; 5 〉 |
 | Równy          | `!`      | NOT   | `!(x > 2 \|\| x <= 5)` | x ∈ ( 2 ; 5 〉 |
 
-Zadaniem jakie sobie wysnaczymy będzie obliczenie wartości funkcji w zależności od podanej wartości `x` dla **przebiegu A**
+A... zmieńmy zdanie odnośnie 5 latków, którym jednak nie damy dofinansowania.
+
+Zadaniem jakie sobie teraz wyznaczymy będzie obliczenie wartości funkcji w zależności od podanej wartości `x` dla **przebiegu A**
 
 | przebieg A               | przebieg B               |
 |:------------------------:|:------------------------:|
-| ![](./image/plot-a.png) | ![](./image/plot-b.png) |
+| ![](./image/plot-a.png)  | ![](./image/plot-b.png)  |
 
 ```c#
 if(x < -2)
