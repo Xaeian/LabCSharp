@@ -4,11 +4,11 @@ STM32 | Podstawy
 
 # 1. Operacje bitowe
 
-
+TODO
 
 # 2. IDE, Dioda, Przycisk
 
-Moim nieskromnym zdaniem w nauce programowania, *potem w sumie też*, ważne jest żeby osiągać jakieś efekty szybko. Praca z systemami wbudowanymi posiada niekończące się zagadanienia poboczne, jak konfiguracja środowiska, hardware itd. Zatem pominiemy to wszystko, ściągniemy środowisko [**STM32CubeIDE**](https://www.st.com/en/development-tools/stm32cubeide.html), dostarczane **ST**, następnie klonujemy [repozutorium 'nucleo'](https://github.com/Xaeian/nucleo) z przygotowanym proejktem bazowym.
+Moim nieskromnym zdaniem w nauce programowania, *potem w sumie też*, ważne jest żeby osiągać jakieś efekty szybko. Praca z systemami wbudowanymi posiada niekończące się zagadanienia poboczne, jak konfiguracja środowiska, hardware itd. Zatem pominiemy to wszystko, ściągniemy środowisko [**STM32CubeIDE**](https://www.st.com/en/development-tools/stm32cubeide.html), dostarczane **ST**, następnie klonujemy [repozutorium **nucleo**](https://github.com/Xaeian/nucleo) z przygotowanym proejktem bazowym.
 
     git clone https://github.com/Xaeian/nucleo.git
 
@@ -94,20 +94,26 @@ while(1)
 
 Migająca dioda już za nami - teraz pora na przycisk. Zanim jednak zabierzemy się za jego konfigurację warto przejrzeć się wszystkim [konfiguracją **GPIO**](http://www.sqrt.pl/datasheet/STM32G0x1.pdf#page=197)
 
-Przycisk na płytce nucleo jest od razu 
-
-
+Przycisk na płytce **nucleo** jest od razu podciągnięty do zasilania *(pull-up)*, więc wystarczy ustawić na jako wejście i odczytywać jego stan. Niech nasz program świeci diodą w przypadku wciśnięcia przycisku, a w przeciwnym razie niech dioda pozostanie zgaszona
 
 [//]: 197
 
+```c
+RCC->IOPENR |= RCC_IOPENR_GPIOCEN;
+GPIOC->MODER &= ~GPIO_MODER_MODE13;
 
-
-
-
-W procesorach STM32 to czy nóżka jest podciągnięta 
-
+while(1)
+{
+  if(!(GPIOC->IDR & (GPIOC->13))) GPIOA->BSRR |= GPIO_BSRR_BS5;
+  else GPIOA->BSRR |= GPIO_BSRR_BR5;
+}
+```
 
 # 2. Timery
+
+Nasz mikrokontroler został zaprojektowany przez firmę ARM oraz ST. W 
+
+//Timery są to liczniki, które 
 
 
 

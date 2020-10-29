@@ -320,3 +320,47 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
 
 ## Zadanie
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji $y = ax^2 + bx + c$. Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
+
+
+```c#
+using System;
+
+namespace workspace
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.Write("a: ");
+      double a = double.Parse(Console.ReadLine());
+
+      Console.Write("b: ");
+      double b = double.Parse(Console.ReadLine());
+
+      Console.Write("c: ");
+      double c = double.Parse(Console.ReadLine());
+
+      double delta = (b*b) - 4*a*c;
+      double x1, x2;
+
+      if(delta > 0)
+      {
+        x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+        x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+
+        Console.WriteLine("x1 = " + x1);
+        Console.WriteLine("x2 = " + x2);
+      }
+      else if(delta == 0)
+      {
+        x1 = -b / (2 * a);
+        Console.WriteLine("x = " + x1);
+      }
+      else
+      {
+        Console.WriteLine("Brak rozwiązań");
+      }
+    }
+  }
+}
+```
