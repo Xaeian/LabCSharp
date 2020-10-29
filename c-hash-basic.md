@@ -318,9 +318,47 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
  + Wyświetlenie wartości `y` jako rezultat
  + Zająć się przebiegiem B
 
+```c#
+using System;
+
+namespace workspace
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.Write("Podaj wartość x: ");
+      double x = double.Parse(Console.ReadLine());
+      double y;
+
+      if(x < -5)
+      {
+        y = 0.5 * x + 0.5;
+      }
+      else if(x < -2)
+      {
+        y = (1.44 * x * x) + (10 * x) + 16;
+      }
+      else if (x < 0)
+      {
+        y = Math.Sqrt(4 - x*x);
+      }
+      else if (x < 3)
+      {
+        y = 2;
+      }
+      else
+      {
+        y = -((double)3 / 4) * x + 5.25;
+      }
+      Console.WriteLine(y);
+    }
+  }
+}
+```
+
 ## Zadanie
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji $y = ax^2 + bx + c$. Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
-
 
 ```c#
 using System;
