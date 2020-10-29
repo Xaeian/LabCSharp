@@ -343,6 +343,20 @@ namespace workspace
       double delta = (b*b) - 4*a*c;
       double x1, x2;
 
+      if(a == 0)
+      {
+        if(b == 0)
+        {
+          if(c == 0) Console.WriteLine("Nieskończeni wiele rozwiązań");
+          else Console.WriteLine("Brak rozwiązań");
+          return;
+        }
+
+        x1 = c / b;
+        Console.WriteLine("x = " + x1);
+        return;
+      }
+
       if(delta > 0)
       {
         x1 = (-b + Math.Sqrt(delta)) / (2 * a);
