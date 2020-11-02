@@ -6,8 +6,9 @@ C# | Podstawy
 
 ```c#
 Console.Write("i: ");
-int i = int.Parse(Console.ReadLine());
-while(i < 10) 
+int end = int.Parse(Console.ReadLine());
+int i = 0;
+while(i < end)
 {
   Console.Write(i + " ");
   i++;
@@ -35,7 +36,7 @@ for(int i = 0; i < 10; i++)
 
 
 ```c#
-Console.Write("koniec: ");
+Console.Write("end: ");
 int end = int.Parse(Console.ReadLine());
 
 if(end < 100)

@@ -295,6 +295,10 @@ Zadaniem jakie sobie teraz wyznaczymy będzie obliczenie wartości funkcji w zal
 |:------------------------:|:------------------------:|
 | ![](./image/plot-a.png)  | ![](./image/plot-b.png)  |
 
+| przebieg C               | przebieg D               |
+|:------------------------:|:------------------------:|
+| ![](./image/plot-a.png)  | ![](./image/plot-b.png)  |
+
 ```c#
 if(x < -2)
 {
@@ -316,7 +320,8 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
  + dopisać deklaracje zmiennych `x`, `y`
  + dodać pobranie wartości `x` z konsoli
  + Wyświetlenie wartości `y` jako rezultat
- + Zająć się przebiegiem B
+ + Zająć się przebiegami B i C. W przebiegu C można użyć tylko jednej instrukcji `if` - bez `if else`
+
 
 ```c#
 using System;
@@ -341,7 +346,7 @@ namespace workspace
       }
       else if (x < 0)
       {
-        y = Math.Sqrt(4 - x*x);
+        y = Math.Sqrt(4 - x * x);
       }
       else if (x < 3)
       {
@@ -349,7 +354,7 @@ namespace workspace
       }
       else
       {
-        y = -((double)3 / 4) * x + 5.25;
+        y = -((double)3 / 4) * x + 4.25;
       }
       Console.WriteLine(y);
     }
