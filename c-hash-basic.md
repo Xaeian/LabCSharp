@@ -297,7 +297,7 @@ Zadaniem jakie sobie teraz wyznaczymy będzie obliczenie wartości funkcji w zal
 
 | przebieg C               | przebieg D               |
 |:------------------------:|:------------------------:|
-| ![](./image/plot-a.png)  | ![](./image/plot-b.png)  |
+| ![](./image/plot-c.png)  | ![](./image/plot-d.png)  |
 
 ```c#
 if(x < -2)
