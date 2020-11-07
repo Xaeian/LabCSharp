@@ -94,6 +94,17 @@ Naszym zadaniem będzie przkształcenie tego łańcucha znaków na tablicę typu
 ```c#
 { 12 45 56.5 8 94 }
 ```
+Do realizaji tego zadania pomocna może okazać się metoda `Split1
+
+```c#
+  string str = Console.ReadLine();
+  String[] list = str.Split(" ");
+```
+<!---
+```c#
+foreach(string element in list) Console.Write(element + " ");
+```
+--->
 
 ## Zadanie 2
 <s>Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby.</s>
