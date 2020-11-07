@@ -383,10 +383,10 @@ namespace workspace
       Console.Write("c: ");
       double c = double.Parse(Console.ReadLine());
 
-      double delta = (b*b) - 4*a*c;
+      double delta = b * b - (4 * a *c);
       double x1, x2;
 
-      if(a == 0)
+      if(a == 0)d
       {
         if(b == 0)
         {
