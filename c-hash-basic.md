@@ -322,7 +322,7 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
  + Wyświetlenie wartości `y` jako rezultat
  + Zająć się przebiegami B i C. W przebiegu C można użyć tylko jednej instrukcji `if` - bez `if else`
 
-
+<!---
 ```c#
 using System;
 
@@ -361,10 +361,12 @@ namespace workspace
   }
 }
 ```
+--->
 
 ## Zadanie
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji $y = ax^2 + bx + c$. Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
+<!---
 ```c#
 using System;
 
@@ -421,3 +423,4 @@ namespace workspace
   }
 }
 ```
+--->
