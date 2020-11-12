@@ -281,11 +281,11 @@ else
 Załóżmy, że dla ludzi w wieku **od 2 do 7** lat oraz **od 26 do 30** przysługuje specjalne dofinansowanie.
 Napiszmy program, gdzie podamy nasz wiek i wyświetli się czy dofinansowanie nam przysługuję. Do tego przydadzą nam się dodatkowe operatory logiczne. Za ich pomocą łączyć i negować operacje porównywania
 
-|   Nazwa        | Operator | Skrót | Przykłady              | Rezultat      |
-|----------------|:--------:|:-----:|------------------------|---------------|
-| Suma logiczna  | `&&`     | AND   | `x > 2 && x <= 5`      | x ∈ ( 2 ; 5 〉 |
-| Większy        | `\|\|`   | OR    | `x <= 2 \|\| x > 5`    | x ∈ ( 2 ; 5 〉 |
-| Równy          | `!`      | NOT   | `!(x > 2 \|\| x <= 5)` | x ∈ ( 2 ; 5 〉 |
+|   Nazwa              | Operator | Skrót | Przykłady              | Rezultat      |
+|----------------------|:--------:|:-----:|------------------------|---------------|
+| Suma logiczna        | `&&`     | AND   | `x > 2 && x <= 5`      | x ∈ ( 2 ; 5 〉 |
+| Alternatywa logiczna | `\|\|`   | OR    | `x <= 2 \|\| x > 5`    | x ∈ ( 2 ; 5 〉 |
+| Negacja              | `!`      | NOT   | `!(x > 2 \|\| x <= 5)` | x ∈ ( 2 ; 5 〉 |
 
 A... zmieńmy zdanie odnośnie 5 latków, którym jednak nie damy dofinansowania.
 

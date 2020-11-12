@@ -2,9 +2,9 @@
 C# | Podstawy
 ---
 
-# 1. Podstawy
+# 1. While / For
 
-Pętla **while**
+Najbardziej podstawową pętlą jest pętla `while`. Wystarczy zawrzeć wewnątrz `()` warunek i do puki jest on spełniony pętla będzie wykonywana. W przykładnie wypiszemy liczby **od 0 do 9**
 
 ```c#
 Console.Write("i: ");
@@ -16,7 +16,7 @@ while(i < end)
   i++;
 }
 ```
-Pętla **do ... while**
+Aby kod z pętli zawsze przynajmniej raz został wykonany (nie zalaeżnie od warunku) trzeba użyć konstrukcji `do..while`:
 
 ```c#
 do
@@ -26,8 +26,38 @@ do
 }
 while(i < 10) 
 ```
+Nawet gdy i będzie większe od 10 to jego wartość wyświetli się na konsoli chociaż raz.
 
-Pętla **for**
+W przypadku iteracji pętle **while** możemy zastąpić pętlą **for**. Wówczas składnia takiej operacji się nieco upraszcza.
+
+```c#
+one-tine-executed;
+while(condition)
+{
+  // [...]
+  every-time-executed;
+}
+
+for(one-tine-executed; condition; every-time-executed) 
+{
+  // [...]
+}
+```
+
+```c#
+int i = 0;
+while(i < 10)
+{
+  Console.Write(i + " ");
+  i++;
+}
+
+for(int i = 0; i < 10; i++) 
+{
+  Console.Write(i + " ");
+}
+```
+Gdy chcemy zakończyć działanie pętli w sytuacji, której nie przewiduje warunek możemy tego dokonać za pomocą instrukcji `break`
 
 ```c#
 for(int i = 0; i < 10; i++) 
@@ -36,25 +66,42 @@ for(int i = 0; i < 10; i++)
   Console.Write(i + " ");
 }
 ```
+Wówczas zostanie wyświetlone
 
-Program, który wypisze liczby od 100 do podanej przez użytkownika liczby.
+    0 1 2
+
+Aby pominąć iteracje dla pojedynczego przypadku, bez wyjści z pętli można użyć instukcji `continue`.
 
 ```c#
-Console.Write("End: ");
-int end = int.Parse(Console.ReadLine());
-
-if(end < 100)
+for(int i = 0; i < 10; i++) 
 {
-  for(int i = 100; i >= end; i--) Console.Write(i + " ");
-}
-else 
-{
-  for(int i = 100; i <= end; i++)  Console.Write(i + " ");
+  if(i == 3) continue;
+  Console.Write(i + " ");
 }
 ```
-## Zadanie 1
+Wówczas zostanie wyświetlone
 
-Poniższy program pobiera od urzytkownika długośc tablicy. Następnie pobiera wszystkie jej elementy, na samym końcu je wypisuje. 
+    0 1 2 4 5 6 7 8 9
+
+Jeżeli chcemy przełamać `n`-tą ilość pętli lub pominąć `n`-tą ilość iteracji wystarczy do powyższych instrukcji dodać liczbę.
+
+```c#
+break n;
+continue n;
+```
+
+Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `start` i `end` typu `int` oraz wyświetli kolejne liczby zaczynając do `start`, a kończąc na `end`.
+
+Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`. 
+
+<!---
+--->
+
+## Zadanie
+
+Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby
+
+Rozwiązanie:
 
 ```c#
 Console.Write("Length: ");
@@ -76,6 +123,48 @@ for(int i = 0; i < n; i++)
   Console.Write(" " + arr[i]);
 }
 ```
+
+# 2. Tablice
+
+Tablice możemy zadeklarować na 2 sposoby.
+Deklarując pustą tablicę o długości `n`.
+
+```c#
+double[] nbr = new double[n];
+```
+Wprowadzając do tablicy konkretne wartości
+
+```c#
+double[] nbr = { 12, 45, 56.5, 8, 94 };
+```
+Wypisanie wszystkich elementów tablicy można zrealizować oczywiście za pomocą pętli `for` 
+
+```c#
+for(int i = 0; i < nbr.Length; i++)
+  Console.WriteLine("nbr[" + i + "] = " + nbr[i]);         
+```
+    nbr[0] = 12    
+    nbr[1] = 45
+    nbr[2] = 56,5
+    nbr[3] = 8
+    nbr[4] = 94
+
+Jednak, gdy nie jest potrzebny nam index tablicy, to bardziej elegancko użyć jest pętli `foreach`.
+
+```c#
+foreach(double nbr_i in nbr)
+    Console.Write(nbr_i + " "); 
+```
+    12 45 56,5 8 94
+
+W tej pętli deklarowana jest zmienna pomocnicza. W naszym przypadku `nbr_i` i podczas kolejnych iteracji umieszczane w nim są kolejne elementy z tablicy.
+
+Jak już torszkę ogarniamy pętle i tablicę możnaby napisac program, który pobiera od urzytkownika długośc tablicy, a następnie wszystkie jej elementy. Dodatko jak 
+
+
+, na samym końcu je wypisuje. 
+
+
 
 Pierzym krokiem będzie pobranie operacji arytmentycznej podanej przez użytkownika (`+`, `-`, `*`, `/`) oraz liczby z kają ta operacja ma być wykonana.
 
@@ -100,6 +189,11 @@ Do realizaji tego zadania pomocna może okazać się metoda `Split1
   string str = Console.ReadLine();
   String[] list = str.Split(" ");
 ```
+
+```c#
+  double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
+```
+
 <!---
 ```c#
 foreach(string element in list) Console.Write(element + " ");
@@ -107,9 +201,7 @@ foreach(string element in list) Console.Write(element + " ");
 --->
 
 ## Zadanie 2
-<s>Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby.</s>
-
-Program wypisujący liczby peirwsze:
+Program wypisujący liczby peirwsze - poprzednie zadanie:
 
 ```c#
 Console.Write("End: ");
