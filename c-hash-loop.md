@@ -103,26 +103,7 @@ Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez 
 
 Rozwiązanie:
 
-```c#
-Console.Write("Length: ");
-int n = int.Parse(Console.ReadLine());
-  
-double[] arr = new double[n];
 
-for(int i = 0; i < n; i++)
-{
-  Console.Write("Element[" + i + "]: ");
-  arr[i] = double.Parse(Console.ReadLine());
-}
-
-// TODO: 
-
-Console.Write("Output:");
-for(int i = 0; i < n; i++)
-{
-  Console.Write(" " + arr[i]);
-}
-```
 
 # 2. Tablice
 
@@ -159,12 +140,8 @@ foreach(double nbr_i in nbr)
 
 W tej pętli deklarowana jest zmienna pomocnicza. W naszym przypadku `nbr_i` i podczas kolejnych iteracji umieszczane w nim są kolejne elementy z tablicy.
 
-Jak już torszkę ogarniamy pętle i tablicę możnaby napisac program, który pobiera od urzytkownika długośc tablicy, a następnie wszystkie jej elementy. Dodatko jak 
 
-
-, na samym końcu je wypisuje. 
-
-
+Jak już torszkę ogarniamy pętle i tablicę można by napisać program, który pobiera od użytkownika długość tablicy, a następnie wszystkie jej elementy. W zależności od wybranej operacji wykona ją na całej podanej tablicy, a na końcu wyrzuci na konsolę tablicę wynikową.
 
 Pierzym krokiem będzie pobranie operacji arytmentycznej podanej przez użytkownika (`+`, `-`, `*`, `/`) oraz liczby z kają ta operacja ma być wykonana.
 
@@ -174,7 +151,30 @@ Opracj ma być wykonana na wszystkich elementach tablicy podanej przez użytkown
 for(int i = 0; i < n; i++) arr[i] += y
 ```
 
-Gdzie `y` jest liczbą podaną przez użytkownika. Kolejnym krokiem będzie zmiana sposobu wprowadzania liczb przez użytkownika. Użytkownik poda łańcuch liczb oddzielonych spacjami. Przykładowo.
+Gdzie `y` jest liczbą podaną przez użytkownika.
+
+```c#
+Console.Write("Length: ");
+int n = int.Parse(Console.ReadLine());
+  
+double[] arr = new double[n];
+
+for(int i = 0; i < n; i++)
+{
+  Console.Write("Element[" + i + "]: ");
+  arr[i] = double.Parse(Console.ReadLine());
+}
+
+// TODO: 
+
+Console.Write("Output:");
+for(int i = 0; i < n; i++)
+{
+  Console.Write(" " + arr[i]);
+}
+```
+
+Kolejnym krokiem będzie zmiana sposobu wprowadzania liczb przez użytkownika. Użytkownik poda łańcuch liczb oddzielonych spacjami. Przykładowo.
 
     12 45 56.5 8 94
 
@@ -186,21 +186,16 @@ Naszym zadaniem będzie przkształcenie tego łańcucha znaków na tablicę typu
 Do realizaji tego zadania pomocna może okazać się metoda `Split1
 
 ```c#
-  string str = Console.ReadLine();
-  String[] list = str.Split(" ");
+string str = Console.ReadLine();
+String[] list = str.Split(" ");
 ```
 
 ```c#
-  double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
+double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
 ```
 
-<!---
-```c#
-foreach(string element in list) Console.Write(element + " ");
-```
---->
 
-## Zadanie 2
+## Zadanie
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
 ```c#
@@ -211,7 +206,7 @@ bool flag;
 
 for(int i = 1; i <= end; i++)
 {
-  c = true;
+  flag = true;
   for (int j = 2; j <= Math.Sqrt(i); j++)
   {
     if(i % j == 0)
@@ -224,3 +219,104 @@ for(int i = 1; i <= end; i++)
 }
 ```
 Program taki jest dość wolny podczas szukania bardzo dużych liczb pierwszych. Dlatego, żeby go przyspieszyć będziemy zapisywać znalezione liczby pierwsze i sprawdzać dzielenie tylko przez liczby z tablicy. Ponieważ gdy liczba nie dzieli się przez wszystkie mniejsze od niej liczy pierwsze to tym bardziej nie dzieli się przez ich wielokrotności. Do dzieła!
+
+Przykładowa realizacja:
+
+```c#
+Console.Write("End: ");
+
+int end = int.Parse(Console.ReadLine());
+bool flag;
+int[] array = new int[1000];
+int k = 0;
+
+for(int i = 2; i <= end; i++)
+{
+  flag = true;
+  for(int j = 0; j < k; j++)
+  {
+    if(i % array[j] == 0)
+    {
+      flag = false;
+      break;
+    }
+
+    if(Math.Sqrt(array[j]) > i) break;
+  }
+
+  if(flag == true)
+  {
+    array[k] = i;
+    k++;
+  }
+}
+
+for(int i = 0; i < k; i++) Console.Write(array[i] + " ");
+```
+
+# 3. Argumenty
+
+Przechwytywanie ciągów znaków od użytkownika to zaledwie jedna z opcji pobierania danych wejściowych - w dodatku w przypadku programów serwerowych bardzo mało praktyczna, a jako aplikacje użytkowe znacznie lepiej sprawdza się **GUI**. Przy relatywnie małej ilości inputów fajnie wykorzystać argumenty wejściowe `type[] args` jako parametry dla naszych programów.
+
+Domyślnie w projekcie argumenty traktowane są jako string.
+
+```c#
+static void Main(string[] args)
+```
+Lecz bardzo łatwo to zmienić
+```c#
+static void Main(int[] args)
+```
+
+Zmodyfikujmy nasz poprzedni program wykonujący wskazaną operację na tablicy tak, aby wszystkie informacje wejściowy były dostarczane jako argumenty.
+
+Argumenty dostarcza się podczas uruchamiania programu:
+    
+    dotnet run [args]
+
+W naszym przypdaku
+
+    dotnet run {y} {mode} [x-array]
+
+```c#
+if(args.Length < 3) return;
+
+double[] x = new double[args.Length - 2];
+double y = double.Parse(args[0]);
+string opt = args[1];
+
+for(int i = 0; i < args.Length; i++)
+{
+  x[i] = double.Parse(args[i + 2]);
+}
+```
+
+## Zadanie
+Oczywiście modyfikujemy program z liczbami pierwszymi, tak aby wykorzystać metodę pobierania zmiennych poprzez argumenty. Żeby jednak nie było za prosto teraz podajemy przedział z którego mają być wyświetlane liczby.
+
+    dotnet run {min} {max}
+
+Zamiast tablicy.
+
+```c#
+int[] array = new int[1000];
+```
+Lepiej użyć **listy**, ponieważ nie jesteśmy ograniczeni jej długością. Lista to taka dyamiczna tablica.
+
+```c#
+List<string> array = new List<string>();
+```
+
+# 4. File
+
+W czwartek bierzemy się za pliki, więc jak ktoś chce może ogarnąć wczytywanie i wyświetlanie danych z pliku:
+
+```c#
+string text = System.IO.File.ReadAllText("./data.csv");
+        System.Console.WriteLine(text);
+```
+
+```c#
+string[] lines = System.IO.File.ReadAllLines("./data.csv");
+foreach (string line in lines) Console.WriteLine(line);
+```
