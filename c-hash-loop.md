@@ -24,7 +24,7 @@ do
   Console.Write(i + " ");
   i++;
 }
-while(i < 10) 
+while(i < end) 
 ```
 Nawet gdy i będzie większe od 10 to jego wartość wyświetli się na konsoli chociaż raz.
 
@@ -83,23 +83,64 @@ Wówczas zostanie wyświetlone
 
     0 1 2 4 5 6 7 8 9
 
-Jeżeli chcemy przełamać `n`-tą ilość pętli lub pominąć `n`-tą ilość iteracji wystarczy do powyższych instrukcji dodać liczbę.
-
-```c#
-break n;
-continue n;
-```
-
 Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `start` i `end` typu `int` oraz wyświetli kolejne liczby zaczynając do `start`, a kończąc na `end`.
 
 Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`. 
 
-<!---
---->
+```c#
+using System;
+
+namespace newg
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.Write("start: ");
+      int start = int.Parse(Console.ReadLine());
+      Console.Write("end: ");
+      int end = int.Parse(Console.ReadLine());
+
+      while(start != end)
+      {
+        Console.Write(start + " ");
+        if(start > end) start--;
+        else start++;
+      }
+      Console.Write(start + " ");
+    }
+  }
+}
+```
 
 ## Zadanie
 
 Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby
+
+<!---
+Rozwiązanie:
+
+```c#
+Console.Write("End: ");
+
+int end = int.Parse(Console.ReadLine());
+bool flag;
+
+for(int i = 1; i <= end; i++)
+{
+  flag = true;
+  for (int j = 2; j <= Math.Sqrt(i); j++)
+  {
+    if(i % j == 0)
+    {
+      flag = false;
+      break;
+    }
+  }
+  if(flag == true) Console.Write(i + " ");
+}
+```
+--->
 
 # 2. Tablice
 
@@ -193,28 +234,7 @@ double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, doub
 ## Zadanie
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
-<!---
-```c#
-Console.Write("End: ");
 
-int end = int.Parse(Console.ReadLine());
-bool flag;
-
-for(int i = 1; i <= end; i++)
-{
-  flag = true;
-  for (int j = 2; j <= Math.Sqrt(i); j++)
-  {
-    if(i % j == 0)
-    {
-      flag = false;
-      break;
-    }
-  }
-  if(flag == true) Console.Write(i + " ");
-}
-```
---->
 
 Program taki jest dość wolny podczas szukania bardzo dużych liczb pierwszych. Dlatego, żeby go przyspieszyć będziemy zapisywać znalezione liczby pierwsze i sprawdzać dzielenie tylko przez liczby z tablicy. Ponieważ gdy liczba nie dzieli się przez wszystkie mniejsze od niej liczy pierwsze to tym bardziej nie dzieli się przez ich wielokrotności. Do dzieła!
 
