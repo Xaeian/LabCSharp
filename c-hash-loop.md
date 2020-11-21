@@ -101,10 +101,6 @@ Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle
 
 Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby
 
-Rozwiązanie:
-
-
-
 # 2. Tablice
 
 Tablice możemy zadeklarować na 2 sposoby.
@@ -194,10 +190,10 @@ String[] list = str.Split(" ");
 double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
 ```
 
-
 ## Zadanie
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
+<!---
 ```c#
 Console.Write("End: ");
 
@@ -218,10 +214,13 @@ for(int i = 1; i <= end; i++)
   if(flag == true) Console.Write(i + " ");
 }
 ```
+--->
+
 Program taki jest dość wolny podczas szukania bardzo dużych liczb pierwszych. Dlatego, żeby go przyspieszyć będziemy zapisywać znalezione liczby pierwsze i sprawdzać dzielenie tylko przez liczby z tablicy. Ponieważ gdy liczba nie dzieli się przez wszystkie mniejsze od niej liczy pierwsze to tym bardziej nie dzieli się przez ich wielokrotności. Do dzieła!
 
 Przykładowa realizacja:
 
+<!---
 ```c#
 Console.Write("End: ");
 
@@ -253,6 +252,7 @@ for(int i = 2; i <= end; i++)
 
 for(int i = 0; i < k; i++) Console.Write(array[i] + " ");
 ```
+--->
 
 # 3. Argumenty
 
