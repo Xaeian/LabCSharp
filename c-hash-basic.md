@@ -8,7 +8,7 @@ Programowanie w języku **C#** nie wiąże się z koniecznością instalacji pla
 
 Jeżeli pracujemy na systemie **Windows** na początku jak przystało na przyszłych pro-programistów ogarnijmy sobie konsole, którą możemy otwierać z dowolnego folderu. Fają opcją jest zainstalowanie sobie [klienta **GIT**](https://git-scm.com/download/win). Ma on wbudowaną konsole, a prędzej czy później będziemy wypadało korzystać  z tego narzędzia.
 
-Żeby kompilować i uruchamiać kod **C#** musimy mieć zainstalowany pakiet. [**NET Core**](https://dotnet.microsoft.com/download).
+Żeby kompilować i uruchamiać kod **C#** musimy mieć zainstalowany pakiet [**.NET** SDK x64](https://dotnet.microsoft.com/download).
 
 Teraz wystarczy stworzyć folder z nazwą projektu oraz otworzyć w nim konsolę. 
 
@@ -287,7 +287,27 @@ Napiszmy program, gdzie podamy nasz wiek i wyświetli się czy dofinansowanie na
 | Alternatywa logiczna | `\|\|`   | OR    | `x <= 2 \|\| x > 5`    | x ∈ ( 2 ; 5 〉 |
 | Negacja              | `!`      | NOT   | `!(x > 2 \|\| x <= 5)` | x ∈ ( 2 ; 5 〉 |
 
+```c#
+Console.Write("Ile masz lat? ");
+double age = double.Parse(Console.ReadLine());
+
+if((age >= 2 && age <= 7) || (age >= 26 && age <= 30))
+  Console.WriteLine("Otrzymasz dofinansowanie - Jupi :)");
+else
+  Console.WriteLine("Nie będzie piniążków :(");
+```
+
 A... zmieńmy zdanie odnośnie 5 latków, którym jednak nie damy dofinansowania.
+
+```c#
+Console.Write("Ile masz lat? ");
+double age = double.Parse(Console.ReadLine());
+
+if(((age >= 2 && age <= 7) || (age >= 26 && age <= 30)) && age != 5)
+  Console.WriteLine("Otrzymasz dofinansowanie - Jupi :)");
+else
+  Console.WriteLine("Nie będzie piniążków :(");
+```
 
 Zadaniem jakie sobie teraz wyznaczymy będzie obliczenie wartości funkcji w zależności od podanej wartości `x` dla **przebiegu A**
 
@@ -389,7 +409,7 @@ namespace workspace
       double delta = b * b - (4 * a *c);
       double x1, x2;
 
-      if(a == 0)d
+      if(a == 0)
       {
         if(b == 0)
         {
@@ -397,7 +417,6 @@ namespace workspace
           else Console.WriteLine("Brak rozwiązań");
           return;
         }
-
         x1 = c / b;
         Console.WriteLine("x = " + x1);
         return;

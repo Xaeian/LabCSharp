@@ -110,6 +110,7 @@ Console.Write("start: ");
 int start = int.Parse(Console.ReadLine());
 Console.Write("end: ");
 int end = int.Parse(Console.ReadLine());
+
 if(start < end)
 {
   for(int i = x; i <= y; i++)
@@ -243,13 +244,11 @@ double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, doub
 ## Zadanie
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
-
-
 Program taki jest dość wolny podczas szukania bardzo dużych liczb pierwszych. Dlatego, żeby go przyspieszyć będziemy zapisywać znalezione liczby pierwsze i sprawdzać dzielenie tylko przez liczby z tablicy. Ponieważ gdy liczba nie dzieli się przez wszystkie mniejsze od niej liczy pierwsze to tym bardziej nie dzieli się przez ich wielokrotności. Do dzieła!
 
-Przykładowa realizacja:
-
 <!---
+Rozwiązanie:
+
 ```c#
 Console.Write("End: ");
 
@@ -338,14 +337,51 @@ List<string> array = new List<string>();
 
 # 4. File
 
-W czwartek bierzemy się za pliki, więc jak ktoś chce może ogarnąć wczytywanie i wyświetlanie danych z pliku:
+Aby korzystać w prostszy sposób z metod wczytywania i zapisu do plików dodajmy do przestrzeni nazw bibliotekę `System.IO`:
 
 ```c#
-string text = System.IO.File.ReadAllText("./data.csv");
-        System.Console.WriteLine(text);
+using System;
+using System.IO;
 ```
 
+Pliki możemy wczytywać i zapisywać jako całość - wówczas zawartość wczytywana jest do zmiennej typu `string`:
+
 ```c#
-string[] lines = System.IO.File.ReadAllLines("./data.csv");
-foreach (string line in lines) Console.WriteLine(line);
+string text = File.ReadAllText("./data.csv"); // Load
+Console.WriteLine(text); // Display
+File.WriteAllText("./output.csv", text); // Save
 ```
+Lub jako tablicę linii - wówczas zawartość wczytywana jest do tablicy typu `string`:
+
+```c#
+string[] lines = File.ReadAllLines("./data.csv");// Load
+foreach (string line in lines) Console.WriteLine(line); // Display
+File.WriteAllLines("./output.csv", lines); // Save
+```
+Pora napisać program. Niech wczytuje plik w formacie [`data.csv`]("./file/data/csv"). W pliku są 2 kolumny. Jedna z nich to prąd, a druga napięcie. Zadeklarujmy zatem dwie tablice i umieśćmy w nich wczytane dane. Na koniec odbudujmy plik `csv`.
+
+```c#
+string[] lines = File.ReadAllLines("./data.csv");
+
+double[] I = new double[lines.Length];
+double[] V = new double[lines.Length];
+string[] temp = new string[2];
+
+for(int i = 0; i < lines.Length; i++)
+{
+  temp = lines[i].Split(",");
+  I[i] = double.Parse(temp[0].Replace(".", ","));
+  V[i] = double.Parse(temp[1].Replace(".", ","));
+}
+
+string output = "";
+
+for(int i = 0; i < lines.Length; i++)
+  output += I[i] + ";" + V[i] + "\r\n";
+
+output = output.Replace(",", ".");
+output = output.Replace(";", ",");
+
+File.WriteAllText("./output.csv", output);
+```
+Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
