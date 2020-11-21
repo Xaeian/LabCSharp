@@ -87,7 +87,8 @@ Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `st
 
 Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`. 
 
-<!---
+Pętla `while`:
+
 ```c#
 Console.Write("start: ");
 int start = int.Parse(Console.ReadLine());
@@ -102,6 +103,8 @@ while(start != end)
 }
 Console.Write(start + " ");
 ```
+Pętla `for`:
+
 ```c#
 Console.Write("start: ");
 int start = int.Parse(Console.ReadLine());
@@ -118,7 +121,6 @@ else
     Console.Write(i + " ");                
 }
 ```
---->
 
 ## Zadanie
 
@@ -227,7 +229,7 @@ Naszym zadaniem będzie przkształcenie tego łańcucha znaków na tablicę typu
 ```c#
 { 12 45 56.5 8 94 }
 ```
-Do realizaji tego zadania pomocna może okazać się metoda `Split1
+Do realizaji tego zadania pomocna może okazać się metoda `Split1`
 
 ```c#
 string str = Console.ReadLine();
