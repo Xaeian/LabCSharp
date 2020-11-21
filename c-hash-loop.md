@@ -87,35 +87,42 @@ Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `st
 
 Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`. 
 
+<!---
 ```c#
-using System;
+Console.Write("start: ");
+int start = int.Parse(Console.ReadLine());
+Console.Write("end: ");
+int end = int.Parse(Console.ReadLine());
 
-namespace newg
+while(start != end)
 {
-  class Program
-  {
-    static void Main(string[] args)
-    {
-      Console.Write("start: ");
-      int start = int.Parse(Console.ReadLine());
-      Console.Write("end: ");
-      int end = int.Parse(Console.ReadLine());
-
-      while(start != end)
-      {
-        Console.Write(start + " ");
-        if(start > end) start--;
-        else start++;
-      }
-      Console.Write(start + " ");
-    }
-  }
+  Console.Write(start + " ");
+  if(start > end) start--;
+  else start++;
+}
+Console.Write(start + " ");
+```
+```c#
+Console.Write("start: ");
+int start = int.Parse(Console.ReadLine());
+Console.Write("end: ");
+int end = int.Parse(Console.ReadLine());
+if(start < end)
+{
+  for(int i = x; i <= y; i++)
+    Console.Write(i + " ");
+}
+else
+{
+  for(int i = x; i >= y; i--)
+    Console.Write(i + " ");                
 }
 ```
+--->
 
 ## Zadanie
 
-Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby
+Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby. Liczby pierwsze są podzielne przez 1 i samą siebie. Warto skorzystać z Sita Eratostenesa.
 
 <!---
 Rozwiązanie:
