@@ -127,7 +127,6 @@ else
 
 Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby. Liczby pierwsze są podzielne przez 1 i samą siebie. Warto skorzystać z Sita Eratostenesa.
 
-<!---
 Rozwiązanie:
 
 ```c#
@@ -150,7 +149,6 @@ for(int i = 1; i <= end; i++)
   if(flag == true) Console.Write(i + " ");
 }
 ```
---->
 
 # 2. Tablice
 
@@ -246,7 +244,6 @@ Program wypisujący liczby peirwsze - poprzednie zadanie:
 
 Program taki jest dość wolny podczas szukania bardzo dużych liczb pierwszych. Dlatego, żeby go przyspieszyć będziemy zapisywać znalezione liczby pierwsze i sprawdzać dzielenie tylko przez liczby z tablicy. Ponieważ gdy liczba nie dzieli się przez wszystkie mniejsze od niej liczy pierwsze to tym bardziej nie dzieli się przez ich wielokrotności. Do dzieła!
 
-<!---
 Rozwiązanie:
 
 ```c#
@@ -280,7 +277,6 @@ for(int i = 2; i <= end; i++)
 
 for(int i = 0; i < k; i++) Console.Write(array[i] + " ");
 ```
---->
 
 # 3. Argumenty
 
@@ -360,6 +356,7 @@ File.WriteAllLines("./output.csv", lines); // Save
 ```
 Pora napisać program. Niech wczytuje plik w formacie [`data.csv`]("./file/data/csv"). W pliku są 2 kolumny. Jedna z nich to prąd, a druga napięcie. Zadeklarujmy zatem dwie tablice i umieśćmy w nich wczytane dane. Na koniec odbudujmy plik `csv`.
 
+<!---
 ```c#
 string[] lines = File.ReadAllLines("./data.csv");
 
@@ -385,3 +382,8 @@ output = output.Replace(";", ",");
 File.WriteAllText("./output.csv", output);
 ```
 Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
+--->
+
+<!---
+modyfikacja / pochodna / całka
+--->
