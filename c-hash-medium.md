@@ -356,7 +356,6 @@ File.WriteAllLines("./output.csv", lines); // Save
 ```
 Pora napisać program. Niech wczytuje plik w formacie [`data.csv`]("./file/data/csv"). W pliku są 2 kolumny. Jedna z nich to prąd, a druga napięcie. Zadeklarujmy zatem dwie tablice i umieśćmy w nich wczytane dane. Na koniec odbudujmy plik `csv`.
 
-<!---
 ```c#
 string[] lines = File.ReadAllLines("./data.csv");
 
@@ -382,7 +381,6 @@ output = output.Replace(";", ",");
 File.WriteAllText("./output.csv", output);
 ```
 Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
---->
 
 <!---
 modyfikacja / pochodna / całka
