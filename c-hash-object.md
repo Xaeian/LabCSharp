@@ -153,26 +153,28 @@ namespace objectx2
   public class Hero
   {
     public string Name;
-    static int Strength;
-    static int Dexterity;
-    static int Intelligence;
+    private int Strength;
+    private int Dexterity;
+    private int Intelligence;
     public double HP;
     public double MP;
-    public static double ManaRegeneration;
 
     public void Init(int strength = 10, int dexterity = 10, int intelligence = 10)
     {
-      Strength = strength;
-      Dexterity = dexterity;
-      Intelligence = intelligence;
+      this.Strength = strength;
+      this.Dexterity = dexterity;
+      this.Intelligence = intelligence;
       HP = 50 + strength;
-      MP = 10 + (3 * strength);
-      ManaRegeneration = intelligence / 2;
+      MP = 10 + (3 * intelligence);
     }
 
-    public int GetStrength() { return Strength; }
-    public int GetDexterity() { return Dexterity; }
-    public int GetIntelligence() { return Intelligence; }
+    public int GetStrength() { return this.Strength; }
+    public int GetDexterity() { return this.Dexterity; }
+    public int GetIntelligence() { return this.Intelligence; }
+
+    public void UpStrength() { this.Strength += 5; this.HP += 5; }
+    public void UpDexterity() { this.Dexterity += 5; }
+    public void UpIntelligence() { this.Intelligence += 5; this.MP += (3 * this.Intelligence); }
 
     public Hero(string name, string myclass)
     {
@@ -185,7 +187,6 @@ namespace objectx2
         default: Init(); break;
       }
     }
-    
 
     public void Attack(Hero enemy)
     {
@@ -203,10 +204,26 @@ namespace objectx2
     public void LevelUp()
     {
       Console.Write("  1:Strength, 2:Dexterity, 3:Intelligence ... ");
+      int opt = int.Parse(Console.ReadLine());
 
+      switch(opt)
+      {
+        case 1: UpStrength(); break;
+        case 2: UpDexterity(); break;
+        case 3: UpIntelligence(); break;
+      }
+
+      Console.WriteLine();
     }
 
+    public void Spell()
+    {
+      // mana
+      // 3 czary do wybory
+      // 
+    }
 
+    // Perround (regeneration)
   }
 
   class Program
@@ -230,7 +247,7 @@ namespace objectx2
 
         Console.Write("1:Attack, 2:Spell, 3:LevelUp ... ");
         int opt = int.Parse(Console.ReadLine());
-    
+
         switch(opt)
         {
           case 1:
@@ -242,6 +259,8 @@ namespace objectx2
           break;
 
           case 3:
+            if(tour == 1) hero1.LevelUp();
+            else hero2.LevelUp();
           break;
         }
 
@@ -253,12 +272,7 @@ namespace objectx2
         if(tour > 2) tour = 1;
       }
 
-
-
-
-      // atak
-      // spell
-      // level-up
+      // WIN
     }
   }
 }
