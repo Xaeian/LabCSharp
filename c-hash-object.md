@@ -166,6 +166,7 @@ namespace objectx2
       Dexterity = dexterity;
       Intelligence = intelligence;
       HP = 50 + strength;
+      MP = 10 + (3 * strength);
       ManaRegeneration = intelligence / 2;
     }
 
@@ -178,12 +179,13 @@ namespace objectx2
       Name = name;
       switch(myclass)
       {
-        case "warior": Init(16, 10, 4); break;
-        case "assassin": Init(6, 16, 8); break;
-        case "sorcerer": Init(8, 4, 18); break;
+        case "warior": Init(15, 10, 5); break;
+        case "assassin": Init(5, 15, 10); break;
+        case "sorcerer": Init(5, 5, 20); break;
         default: Init(); break;
       }
     }
+    
 
     public void Attack(Hero enemy)
     {
@@ -197,6 +199,14 @@ namespace objectx2
       }
       else Console.WriteLine("Dodge!");
     }
+
+    public void LevelUp()
+    {
+      Console.Write("  1:Strength, 2:Dexterity, 3:Intelligence ... ");
+
+    }
+
+
   }
 
   class Program
@@ -242,6 +252,10 @@ namespace objectx2
         tour++;
         if(tour > 2) tour = 1;
       }
+
+
+
+
       // atak
       // spell
       // level-up
