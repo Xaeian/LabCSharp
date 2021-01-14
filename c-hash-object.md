@@ -25,13 +25,13 @@ static void Main(string[] args)
 
 # 1. Metody / Funkcje
 
-Umieszczanie wszystkich operacji w funkcji `Main` nie jest zbyt dobrą praktyką. Może okazać się to szczególnie słabe w przypadku dużych programów. Siadając po miesiącu (lub znacznie dłuższym czasie) do takiego kodu będziemy zmuszenie rozkminiać go od zera. Dlatego też nauka dobrych nawyków programowania strukturalnego oraz efektywne operowanie w przestrzeniach nazw tylko pozornie jest *opcjonalne* do nauczenia. W dużych firmach jest to bezwzględny wymóg, który pozwala efektywnie dzielić pracę oraz korzystać z modułów przygotowanych przez innych bez zagłębiana się w kod. Rozwój takiego kodu również jest prostszy no i… w sumie każdy pod roku samodzielnej nauki programowania zmierza w tym kierunku.
+Umieszczanie wszystkich operacji w funkcji `Main` nie jest zbyt dobrą praktyką. Może okazać się to szczególnie słabe w przypadku dużych programów. Siadając po miesiącu (lub znacznie dłuższym czasie) do takiego kodu będziemy zmuszenie rozkminiać go od zera. Dlatego też nauka dobrych nawyków programowania strukturalnego oraz efektywne operowanie w przestrzeniach nazw tylko pozornie jest _opcjonalne_ do nauczenia. W dużych firmach jest to bezwzględny wymóg, który pozwala efektywnie dzielić pracę oraz korzystać z modułów przygotowanych przez innych bez zagłębiana się w kod. Rozwój takiego kodu również jest prostszy no i… w sumie każdy pod roku samodzielnej nauki programowania zmierza w tym kierunku.
 
 Zauważmy, że już w programach, które pisaliśmy zadeklarowaliśmy przestrzeń nazw `namespace` wewnątrz, której mamy klasę `Program`, a w niej funkcję główną `Main`. Na początek dodajmy do klasy `Program` funkcje `Sum`, która doda do siebie dwie zmienne typu `double`:
 
 ```c#
 class Program
-{ 
+{
   static double Sum(double a, double b = 5)
   {
     a = a + b;
@@ -45,18 +45,17 @@ class Program
   }
 }
 ```
+
 Przyjrzyjmy się deklaracji funkcji. Przed samą jej nazwą (`Sum`) znajduję się zmienna, którą funkcja zwróci przy pomocy słowa kluczowego `return`. Jest to oczywiście zmienna typu `double`. Podobnie jak zmienne wejściowe `a` oraz `b`, które znajdują się pomiędzy `()`. Na samym początku znajdują się przedrostki. Akurat w `c#` słowo `static` oznacza, że zmienna lub metoda widoczna jest w całej klasie. Jedynym niepokojącym aspektem jest fragment `b = 5`. W ten sposób przypisujemy zmiennym wartości domyślne, na wypadek ich nie podania podczas przywoływania funkcji - jak w poniższym przykładzie:
 
 ```c#
 double x = 3;
 Console.WriteLine(x + " + 5 = " + Sum(x));
 ```
-*W innych językach `funkcja != metoda`, jednak w `c#` wszystkie funkcje są w klasach, co z automatu czyni je metodami, jednak myślę, że w przypadku tego języka używanie ciągle nazwy metoda byłaby niepotrzebną precyzją*
- 
-Kolejną kłodą lecącą ...., będzie 
 
+_W innych językach `funkcja != metoda`, jednak w `c#` wszystkie funkcje są w klasach, co z automatu czyni je metodami, jednak myślę, że w przypadku tego języka używanie ciągle nazwy metoda byłaby niepotrzebną precyzją_
 
-
+Kolejną kłodą lecącą ...., będzie
 
 ```c#
 class Program
@@ -133,7 +132,7 @@ namespace objectx2
 }
 ```
 
-# Hero2 
+# Hero2
 
 ```c#
 using System;
@@ -220,7 +219,7 @@ namespace objectx2
     {
       // mana
       // 3 czary do wybory
-      // 
+      //
     }
 
     // Perround (regeneration)
@@ -273,6 +272,54 @@ namespace objectx2
       }
 
       // WIN
+    }
+  }
+}
+```
+
+# JSON
+
+```c#
+using System;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+//using Models;
+
+// dotnet add package NuGet.CommandLine --version 5.8.0
+// dotnet add package Newtonsoft.Json --version 12.0.3
+
+namespace JsonSample
+{
+  class Testc
+  {
+    static void Main(string[] args)
+    {
+      string data = File.ReadAllText("./hero.json");
+
+      JObject Hero = JObject.Parse(data);
+
+      //Console.WriteLine("Name: "+ Hero["Name"]);
+      //Console.WriteLine("Strength: " + Hero["Strength"]);
+      //Console.WriteLine("Dexterity: " + Hero["Dexterity"]);
+      //Console.WriteLine("Intelligence: " + Hero["Intelligence"]);
+      //Console.WriteLine("HP: " + Hero["HP"]);
+      //Console.WriteLine("MP: " + Hero["MP"]);
+
+      //
+
+
+
+
+      Console.Write("Array: ");
+
+      //foreach(string tmp in Hero["Array"])
+      //{
+        //Console.Write(tmp + ", ");
+      //}
+
+      Console.WriteLine(Hero.ToString());
+
     }
   }
 }
