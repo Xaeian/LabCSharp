@@ -324,3 +324,15 @@ namespace JsonSample
   }
 }
 ```
+
+```json
+{
+  "Dexterity": 10,
+  "Name": "Edward Białykij",
+  "Strength": 5,
+  "Intelligence": 20,
+  "HP": 40.6,
+  "MP": 56.1,
+  "array": [1, 3]
+}
+```
