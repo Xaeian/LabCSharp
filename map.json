@@ -1,0 +1,195 @@
+{
+  "datatime_format": "datetime",
+  "chart": [
+    {
+      "title": "Powietrze",
+      "plot": [
+        {
+          "legend": "Ci\u015bnienie, Powietrze, Silnik, LB",
+          "size": 1,
+          "unit": "MPa",
+          "split": 3,
+          "series": [
+            {
+              "name": "[0] Rozruch SG",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc1_humi_air_start_engine",
+              "color": "#CD0D23"
+            }
+          ],
+          "rounding": 3
+        },
+        {
+          "legend": "Ci\u015bnienie, Powietrze, Silnik, PB",
+          "size": 1,
+          "unit": "MPa",
+          "split": 3,
+          "series": [
+            {
+              "name": "[1] Rozruch SG",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc2_humi_air_start_engine",
+              "color": "#4996FF"
+            }
+          ],
+          "rounding": 3
+        },
+        {
+          "legend": "Ci\u015bnienie, Powietrze, ZP1",
+          "size": 1,
+          "unit": "MPa",
+          "split": 3,
+          "series": [
+            {
+              "name": "[2] Rozruch, ZP1",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc3_humi_air_start_gen",
+              "color": "#45BF55"
+            }
+          ],
+          "rounding": 3
+        },
+        {
+          "legend": "Ci\u015bnienie, Powietrze, ZAP",
+          "size": 1,
+          "unit": "MPa",
+          "split": 3,
+          "series": [
+            {
+              "name": "[3] Rozruch, PLC3",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc3_humi_air_start_repgen",
+              "color": "#FFCE00"
+            }
+          ],
+          "rounding": 3
+        },
+        {
+          "legend": "Ci\u015bnienie, Powietrze, ZP2",
+          "size": 1,
+          "unit": "MPa",
+          "split": 3,
+          "series": [
+            {
+              "name": "[4] Rozruch, ZP2",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc4_humi_air_start_gen",
+              "color": "#8B10C4"
+            }
+          ],
+          "rounding": 3
+        },
+        {
+          "legend": "Temperatura, Spr\u0119\u017carka pow. rozruchu",
+          "size": 1,
+          "unit": "\u00b0C",
+          "split": 3,
+          "series": [
+            {
+              "name": "[5] Powietrze, Wlot",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc6_temp_air_compressor_start",
+              "color": "#15BFD1"
+            },
+            {
+              "name": "[6] Powietrze, Wylot",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc6_temp_air_compressor_work",
+              "color": "#218E93"
+            }
+          ],
+          "rounding": 3
+        },
+        {
+          "legend": "Ci\u015bnienie, Magistrala przed zbiornikami",
+          "size": 1,
+          "unit": "MPa",
+          "split": 3,
+          "series": [
+            {
+              "name": "[7] Powietrze",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc6_humi_bus_tank",
+              "color": "#A66F3F"
+            },
+            {
+              "name": "[8] Spr\u0119\u017cone Powietrze",
+              "width": 1.5,
+              "step": false,
+              "smooth": false,
+              "fill": false,
+              "show_points": false,
+              "level_lines": [],
+              "scale": 1,
+              "offset": 0,
+              "column": "plc6_humi_bus_steer",
+              "color": "#733924"
+            }
+          ],
+          "rounding": 3
+        }
+      ]
+    }
+  ],
+  "select_limit": 100000,
+  "whitening_limit": 1000,
+  "whitening_time": 1000,
+  "range_min": 1608272026,
+  "range_max": 1608284042
+}
