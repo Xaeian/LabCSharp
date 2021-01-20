@@ -1,6 +1,6 @@
 {
   "data": "Xaeian/tutorial/main/air.csv",
-  "separator": ",",
+  "separator": ";",
   "datatime_format": "datetime",
   "chart": [
     {
