@@ -1,5 +1,5 @@
 {
-  "data": "Xaeian/tutorial/main/air.csv",
+  "data": "https://raw.githubusercontent.com/Xaeian/tutorial/main/air.csv",
   "separator": ";",
   "title": "Powietrze",
   "plot": [
