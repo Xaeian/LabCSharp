@@ -1,6 +1,5 @@
 {
-  "data": "https://raw.githubusercontent.com/Xaeian/tutorial/main/air.csv",
-  "separator": ";",
+  "format": "csv",
   "title": "Powietrze",
   "plot": [
     {
