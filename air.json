@@ -1,5 +1,6 @@
 {
-  "format": "csv",
+  "ext": "csv",
+  "sep": ";",
   "title": "Powietrze",
   "plot": [
     {
