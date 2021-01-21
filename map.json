@@ -96,7 +96,7 @@
     {
       "legend": "Temperatura, Sprężarka pow. rozruchu",
       "size": 1,
-      "unit": "\u00b0C",
+      "unit": "°C",
       "split": 3,
       "series": [
         {
