@@ -10,13 +10,14 @@
   - [Zadanie 2](#-zadanie-2-) - Gra! Znajdowanie wylosowanej liczby
   - [Zadanie 3](#-zadanie-3-) - Poszukiwania liczb pierwszych `#1`
 - 7\. [Arrays](#7-arrays-) - Tablice
-  - [Zadanie 4](#-zadanie-4-) - Poszukiwania liczb pierwszych `#2`
+  - [Zadanie 4](#-zadanie-4-) - Sortowanie elementów z tablicy
+  - [Zadanie 5](#-zadanie-5-) - Poszukiwania liczb pierwszych `#2`
 - 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
-  - [Zadanie 5](#-zadanie-5-) - Poszukiwania liczb pierwszych `#3`
+  - [Zadanie 6](#-zadanie-6-) - Poszukiwania liczb pierwszych `#3`
 - 9\. [Strings](#8-strings-) - Operacje na łańcuchach znaków
-  - [Zadanie 6](#-zadanie-6-)
+  - [Zadanie 7](#-zadanie-7-)
 - 10\. [Files](#8-files-) - Operacje na plikach
-  - [Zadanie 7](#-zadanie-7-) - Obróbka pliku `.csv`
+  - [Zadanie 8](#-zadanie-8-) - Obróbka pliku `.csv`
 
 # 1. Environment [➥](#-content)
 
@@ -117,6 +118,27 @@ natomiast w przypadku, gdy nie tracimy danych konwersje wykonywane są automatyc
 Konwersje automatyczne: `char` ⟶ `int` ⟶ `long` ⟶ `double` ⟶ `string`
 
 Konwersje ręczne: `string` ⟶ `double` ⟶ `long` ⟶ `int` ⟶ `char`
+
+Wiedząc jak pobrać zmienną od urzytkownika, pobierz `x` oraz oblicz wartość funkcji
+
+![fnc](https://render.githubusercontent.com/render/math?math=\LARGE%20f\(x\)=\frac{x^{\pi/2}}{log_{10}\(sqrt\(\pi\)\)}%2B2cos^2\(x\)e^{x})
+
+i wyświetl ją z dokładnością do 4 miejsc po przecinku za pomocą linii kodu
+
+```c#
+Console.WriteLine("{0:#.####}", x); 
+```
+
+Z pewnością pomocna okarze się przygotowana klasa `Math`, którą zawiera między innymi
+
+```c#
+Math.PI // π
+Math.Pow(x, 2.0) // x^2
+Math.Sqrt(x)
+Math.cos(x)
+Math.Log10(x)
+Math.Ext(x) // e^x
+```
 
 # 3. Switch...Case [➥](#-content)
 
@@ -723,8 +745,13 @@ String[] list = str.Split(" ");
 ```c#
 double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
 ```
-
 ## ⭐ Zadanie 4 [➥](#-content)
+
+<!---
+Sortowanie
+-->
+
+## ⭐ Zadanie 5 [➥](#-content)
 
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
@@ -805,7 +832,7 @@ for(int i = 0; i < args.Length; i++)
 }
 ```
 
-## ⭐ Zadanie 5 [➥](#-content)
+## ⭐ Zadanie 6 [➥](#-content)
 
 Oczywiście modyfikujemy program z liczbami pierwszymi, tak aby wykorzystać metodę pobierania zmiennych poprzez argumenty. Żeby jednak nie było za prosto teraz podajemy przedział z którego mają być wyświetlane liczby.
 
@@ -829,7 +856,7 @@ Rozwiązanie:
 
 # 9. Strings [➥](#-content)
 
-## ⭐ Zadanie 6 [➥](#-content)
+## ⭐ Zadanie 7 [➥](#-content)
 
 # 10. Files [➥](#-content)
 
@@ -885,7 +912,7 @@ File.WriteAllText("./output.csv", output);
 
 Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
 
-## ⭐ Zadanie 7 [➥](#-content)
+## ⭐ Zadanie 8 [➥](#-content)
 
 Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`.
 
