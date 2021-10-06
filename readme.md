@@ -1,4 +1,4 @@
-## ⚓ Spis treści
+## ⚓ Content
 
 - 1. [Environment](#1-environment)
 - 2. [Input-Output](#2-input-output)
@@ -18,7 +18,7 @@
 - 10. [Files](#8-files)
   - [Zadanie 7](#-zadanie-7)
 
-# 1. Environment
+# 1. Environment [➥](#-content)
 
 Programowanie w języku **C#** nie wiąże się z koniecznością instalacji platformy **Visual Studio** - jak może się niektórym wydawać. Jej instalacja w celu pisania aplikacji konsolowych _"a tym będziemy się zajmować w tym kursie"_ jest po prostu przerostem formy nad treścią.
 
@@ -64,7 +64,7 @@ Na szczęście nie musimy ich szukać po Internecie. Nasz edytor ma wbudowany me
 
 Najgorsze za nami - mamy już wszystko żeby rozpocząć pracę!
 
-# 2. Input-Output
+# 2. Input-Output [➥](#-content)
 
 Aplikacja konsolowa umieszczona jest w pewnej przestrzeni nazw `App` związanej z naszym projektem.
 Po odpaleniu aplikacji wykonywana jest funkcja `Main` umieszczona w klacie `Program`.
@@ -118,7 +118,7 @@ Konwersje automatyczne: `char` ⟶ `int` ⟶ `long` ⟶ `double` ⟶ `string`
 
 Konwersje ręczne: `string` ⟶ `double` ⟶ `long` ⟶ `int` ⟶ `char`
 
-# 3. Switch...Case
+# 3. Switch...Case [➥](#-content)
 
 Instrukcja `switch` stosujemy wówczas gdy chcemy przeskoczyć do odpowiedniego miejsca w kodzie oznaczonego jako `case`
 w zależności od wartości jaką przyjmuje zmienna `option`.
@@ -197,7 +197,7 @@ switch (day)
 }
 ```
 
-# 4. Operatory arytmetyczne
+# 4. Operatory arytmetyczne [➥](#-content)
 
 Pobierzmy z konsoli zmienną `x` oraz `y`, a następnie wykonajmy operacje arytmetyczną, którą wskaże użytkownik.
 
@@ -256,7 +256,7 @@ double y = double.Parse(Console.ReadLine());
 
     Wynik operacji: x / y = 6,666666666666667
 
-# 5. If...Else
+# 5. If...Else [➥](#-content)
 
 Instrukcja `switch...case` rewelacyjnie sprawdza się przy ograniczonej liczbie opcji. W przypadku, gdy opcji jest więcej, a niekiedy jest ich nieskończenie wiele to z pomocą przychodzi konstrukcja `if...else`
 
@@ -406,7 +406,7 @@ namespace workspace
 }
 ```
 
-## ⭐ Zadanie 1
+## ⭐ Zadanie 1 [➥](#-content)
 
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji: ![y=ax^2+bx+c](https://render.githubusercontent.com/render/math?math=y=ax^2%2Bbx%2Bc) Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
@@ -470,7 +470,7 @@ namespace workspace
 ```
 -->
 
-# 6. While-For
+# 6. While-For [➥](#-content)
 
 Najbardziej podstawową pętlą jest pętla `while`. Wystarczy zawrzeć wewnątrz `()` warunek i do puki jest on spełniony pętla będzie wykonywana. W przykładnie wypiszemy liczby **od 0 do 9**
 
@@ -596,13 +596,13 @@ else
     Console.Write(i + " ");
 }
 ```
-## ⭐ Zadanie 2
+## ⭐ Zadanie 2 [➥](#-content)
 
 <!---
 //losowanie
 -->
 
-## ⭐ Zadanie 3
+## ⭐ Zadanie 3 [➥](#-content)
 
 Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby. Liczby pierwsze są podzielne przez 1 i samą siebie. Warto skorzystać z Sita Eratostenesa.
 
@@ -631,7 +631,7 @@ for(int i = 1; i <= end; i++)
 ```
 -->
 
-# 7. Arrays
+# 7. Arrays [➥](#-content)
 
 Tablice możemy zadeklarować na 2 sposoby.
 Deklarując pustą tablicę o długości `n`.
@@ -724,7 +724,7 @@ String[] list = str.Split(" ");
 double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
 ```
 
-## ⭐ Zadanie 4
+## ⭐ Zadanie 4 [➥](#-content)
 
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
@@ -766,7 +766,7 @@ for(int i = 0; i < k; i++) Console.Write(array[i] + " ");
 ```
 -->
 
-# 8. Arguments
+# 8. Arguments [➥](#-content)
 
 Przechwytywanie ciągów znaków od użytkownika to zaledwie jedna z opcji pobierania danych wejściowych - w dodatku w przypadku programów serwerowych bardzo mało praktyczna, a jako aplikacje użytkowe znacznie lepiej sprawdza się **GUI**. Przy relatywnie małej ilości inputów fajnie wykorzystać argumenty wejściowe `type[] args` jako parametry dla naszych programów.
 
@@ -805,7 +805,7 @@ for(int i = 0; i < args.Length; i++)
 }
 ```
 
-## ⭐ Zadanie 5
+## ⭐ Zadanie 5 [➥](#-content)
 
 Oczywiście modyfikujemy program z liczbami pierwszymi, tak aby wykorzystać metodę pobierania zmiennych poprzez argumenty. Żeby jednak nie było za prosto teraz podajemy przedział z którego mają być wyświetlane liczby.
 
@@ -827,11 +827,11 @@ List<string> array = new List<string>();
 Rozwiązanie:
 -->
 
-# 9. Strings
+# 9. Strings [➥](#-content)
 
-## ⭐ Zadanie 6
+## ⭐ Zadanie 6 [➥](#-content)
 
-# 10. Files
+# 10. Files [➥](#-content)
 
 Aby korzystać w prostszy sposób z metod wczytywania i zapisu do plików dodajmy do przestrzeni nazw bibliotekę `System.IO`:
 
@@ -885,7 +885,7 @@ File.WriteAllText("./output.csv", output);
 
 Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
 
-## ⭐ Zadanie 7
+## ⭐ Zadanie 7 [➥](#-content)
 
 Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`.
 
