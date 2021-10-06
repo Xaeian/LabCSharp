@@ -34,7 +34,7 @@ Pozostaje wpisać dwie komendy. Pierwsza z nich tworzy projekt
 
     dotnet new console
 
-W tym plik `Program.cs` na którym będziemy procować. Możemy otworzyć go notatnikiem, a następnie uruchomić drugą komendę
+W tym plik `Program.cs` na którym będziemy pracować. Możemy otworzyć go notatnikiem, a następnie uruchomić drugą komendę
 
     dotnet run
 
