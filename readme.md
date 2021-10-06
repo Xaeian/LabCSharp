@@ -56,7 +56,6 @@ Polecam podczas instalacji zaznaczyć 2 checkbox-y. Jeden z dodaniem to menu kon
 Jak prosto się domyśleć **VSC** nie _wspiera wszystkiego_ tak z bomby. Wówczas instalka ważyłaby 100GB a nie niecałe 100MB. Żeby wygodnie pracować z **C#** musimy zainstalować odpowiednie rozszerzenia:
 
 - **C#** for Visual Studio Code
-- **C# FixFormat**
 - **Code Runner**
 
 Na szczęście nie musimy ich szukać po Internecie. Nasz edytor ma wbudowany menażer rozszerzeń
@@ -119,17 +118,17 @@ Konwersje automatyczne: `char` ⟶ `int` ⟶ `long` ⟶ `double` ⟶ `string`
 
 Konwersje ręczne: `string` ⟶ `double` ⟶ `long` ⟶ `int` ⟶ `char`
 
-Wiedząc jak pobrać zmienną od urzytkownika, pobierz `x` oraz oblicz wartość funkcji
+Wiedząc jak pobrać zmienną od urzytkownika, pobierz `x` oraz oblicz wartość funkcji.
 
 ![fnc](https://render.githubusercontent.com/render/math?math=\LARGE%20f\(x\)=\frac{x^{\pi/2}}{log_{10}\(sqrt\(\pi\)\)}%2B2cos^2\(x\)e^{x})
 
-i wyświetl ją z dokładnością do 4 miejsc po przecinku za pomocą linii kodu
+Wyświetl ją z dokładnością do 4 miejsc po przecinku za pomocą linii kodu.
 
 ```c#
 Console.WriteLine("{0:#.####}", x); 
 ```
 
-Z pewnością pomocna okarze się przygotowana klasa `Math`, którą zawiera między innymi
+Z pewnością pomocna okarze się przygotowana klasa `Math`, którą zawiera między innymi:
 
 ```c#
 Math.PI // π
