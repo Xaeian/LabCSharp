@@ -1,22 +1,22 @@
 ## ⚓ Content
 
-- 1. [Environment](#1-environment-)
-- 2. [Input-Output](#2-input-output-)
-- 3. [Switch...Case](#3-switch-case-)
-- 4. [Arithmetic operators](#4-arithmetic-operators-)
-- 5. [If...Else](#5-if-else-)
-  - [Zadanie 1](#-zadanie-1-)
-- 6. [While-For](#6-while-for-)
-  - [Zadanie 2](#-zadanie-2-)
-  - [Zadanie 3](#-zadanie-3-)
-- 7. [Arrays](#7-arrays-)
-  - [Zadanie 4](#-zadanie-4-)
-- 8. [Arguments](#8-argumenty-)
-  - [Zadanie 5](#-zadanie-5-)
-- 9. [Strings](#8-strings-)
+- 1\. [Environment](#1-environment-) - Konfiguracja środowiska
+- 2\. [Input-Output](#2-input-output-) - Wejście i wyjście konsoli
+- 3\. [Switch...Case](#3-switch-case-) - Warunek wielokrotnego wyboru
+- 4\. [Arithmetic operators](#4-arithmetic-operators-) - Operacje arytmetyczne
+- 5\. [If...Else](#5-if-else-) - Instrukcje warunkowe
+  - [Zadanie 1](#-zadanie-1-) - Obliczanie miejsc zerowych paraboli
+- 6\. [While-For](#6-while-for-) - Pętle
+  - [Zadanie 2](#-zadanie-2-) - Gra! Znajdowanie wylosowanej liczby
+  - [Zadanie 3](#-zadanie-3-) - Poszukiwania liczb pierwszych `#1`
+- 7\. [Arrays](#7-arrays-) - Tablice
+  - [Zadanie 4](#-zadanie-4-) - Poszukiwania liczb pierwszych `#2`
+- 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
+  - [Zadanie 5](#-zadanie-5-) - Poszukiwania liczb pierwszych `#3`
+- 9\. [Strings](#8-strings-) - Operacje na łańcuchach znaków
   - [Zadanie 6](#-zadanie-6-)
-- 10. [Files](#8-files-)
-  - [Zadanie 7](#-zadanie-7-)
+- 10\. [Files](#8-files-) - Operacje na plikach
+  - [Zadanie 7](#-zadanie-7-) - Obróbka pliku `.csv`
 
 # 1. Environment [➥](#-content)
 
