@@ -386,6 +386,8 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
 - Wyświetlenie wartości `y` jako rezultat
 - Zająć się przebiegami **A** i **B** . W przebiegu **C** można użyć tylko jednej instrukcji `if` - bez `if else`
 
+<!---
+
 Przebieg B:
 
 ```c#
@@ -426,6 +428,8 @@ namespace workspace
   }
 }
 ```
+
+-->
 
 ## ⭐ Zadanie 1 [➥](#-content)
 
