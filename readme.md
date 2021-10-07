@@ -134,7 +134,7 @@ Z pewnością pomocna okarze się przygotowana klasa `Math`, którą zawiera mi�
 Math.PI // π
 Math.Pow(x, 2.0) // x^2
 Math.Sqrt(x)
-Math.cos(x)
+Math.Cos(x)
 Math.Log10(x)
 Math.Exp(x) // e^x
 ```
