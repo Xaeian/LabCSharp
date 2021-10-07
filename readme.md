@@ -136,7 +136,7 @@ Math.Pow(x, 2.0) // x^2
 Math.Sqrt(x)
 Math.cos(x)
 Math.Log10(x)
-Math.Ext(x) // e^x
+Math.Exp(x) // e^x
 ```
 
 # 3. Switch...Case [➥](#-content)
@@ -377,7 +377,7 @@ else
 }
 ```
 
-Zauważmy, że aby liczba była traktowana jako zmiennoprzecinkowa trzeba o tym poinformować kompilator. Realizuje się to za pomocą `(double)`.
+Zauważmy, że aby liczba była traktowana jako zmiennoprzecinkowa trzeba o tym poinformować kompilator. Realizuje się to za pomocą `(double)`. Można także zamiast `4` napisać `4.0`.
 
 Aby w program był w pełni funkcjonalny trzeba jeszcze:
 
