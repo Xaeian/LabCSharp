@@ -56,6 +56,7 @@ Polecam podczas instalacji zaznaczyć 2 checkbox-y. Jeden z dodaniem to menu kon
 Jak prosto się domyśleć **VSC** nie _wspiera wszystkiego_ tak z bomby. Wówczas instalka ważyłaby 100GB a nie niecałe 100MB. Żeby wygodnie pracować z **C#** musimy zainstalować odpowiednie rozszerzenia:
 
 - **C#** for Visual Studio Code
+- **Prettier - Code formatter** - Simon Siefke 
 - **Code Runner**
 
 Na szczęście nie musimy ich szukać po Internecie. Nasz edytor ma wbudowany menażer rozszerzeń
@@ -120,12 +121,12 @@ Konwersje ręczne: `string` ⟶ `double` ⟶ `long` ⟶ `int` ⟶ `char`
 
 Wiedząc jak pobrać zmienną od urzytkownika, pobierz `x` oraz oblicz wartość funkcji.
 
-![fnc](https://render.githubusercontent.com/render/math?math=\LARGE%20f\(x\)=\frac{x^{\pi/2}}{log_{10}\(sqrt\(\pi\)\)}%2B2cos^2\(x\)e^{x})
+![fnc](<https://render.githubusercontent.com/render/math?math=\LARGE%20f(x)=\frac{x^{\pi/2}}{log_{10}(sqrt(\pi))}%2B2cos^2(x)e^{x}>)
 
 Wyświetl ją z dokładnością do 4 miejsc po przecinku za pomocą linii kodu.
 
 ```c#
-Console.WriteLine("{0:#.####}", x); 
+Console.WriteLine("{0:#.####}", x);
 ```
 
 Z pewnością pomocna okarze się przygotowana klasa `Math`, którą zawiera między innymi:
@@ -191,7 +192,7 @@ switch(day)
 
 W znacznej większości języków programowania indeksowanie zaczyna się od `0`, jednak dni tygodnia wydają się wyjątkiem, ponieważ w wielu państwach pierwszym dniem tygodnia jest niedziela. Zatem w przykładzie, zarówno dla `day == 0`, jak i dla `day == 7` zostaniemy poinformowani, że jest niedziela. Jest to możliwe ponieważ kilka `case`-ów może prowadzić do tego samego miejsca w kodzie.
 
-Widzimy, że po każdym bloku kodu dla każdej opcji znajduje się instrukcji `break`. Instrukcja to wymusza wyjście z instrukcji 'switch', a także pętki takich jak `while`, czy `for`. Zamiast instrukcji `break` możemy użyć `goto case`, które spowoduje przeskoczeni do odpowiedniego `case`-a
+Widzimy, że po każdym bloku kodu dla każdej opcji znajduje się instrukcji `break`. Instrukcja to wymusza wyjście z instrukcji `switch`, a także pętki takich jak `while`, czy `for`. Zamiast instrukcji `break` możemy użyć `goto case`, które spowoduje przeskoczeni do odpowiedniego `case`-a
 
 ```c#
 int day = 4;
@@ -264,7 +265,7 @@ Wszystko działa OK, jednak gdy `x = 20`, a `y = 3` i wybierzemy instrukcję `'/
     Podaj operację jaką chcesz wykonać ['+','-','*','/']: /
     Wynik operacji: x / y = 6
 
-Dzieje się tak dla tego, że zmienne na których pracujemy są typu 'int'
+Dzieje się tak dla tego, że zmienne na których pracujemy są typu `int`
 Wystarczy zmienić je na `double` i problem rozwiązany
 
 ```c#
@@ -276,6 +277,10 @@ double y = double.Parse(Console.ReadLine());
 ```
 
     Wynik operacji: x / y = 6,666666666666667
+
+Wartość `option` to zaledwie jeden znak, więc zadeklarujmy go jako `char`. Będzie to wymagało dodatkowego `Parse`-owania oraz zamiany cudzysłowów podwójnych `"` na pojedyncze `'` w `case`-ach.
+
+Zamieńmy też operacje arytmetyczne na ich skrócone wersje oraz
 
 # 5. If...Else [➥](#-content)
 
@@ -621,6 +626,7 @@ else
     Console.Write(i + " ");
 }
 ```
+
 ## ⭐ Zadanie 2 [➥](#-content)
 
 <!---
@@ -748,6 +754,7 @@ String[] list = str.Split(" ");
 ```c#
 double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
 ```
+
 ## ⭐ Zadanie 4 [➥](#-content)
 
 <!---
@@ -881,7 +888,7 @@ File.WriteAllText("./output.csv", text); // Save
 Lub jako tablicę linii - wówczas zawartość wczytywana jest do tablicy typu `string`:
 
 ```c#
-string[] lines = File.ReadAllLines("./data.csv");// Load
+string[] lines = File.ReadAllLines("./data.csv"); // Load
 foreach (string line in lines) Console.WriteLine(line); // Display
 File.WriteAllLines("./output.csv", lines); // Save
 ```
