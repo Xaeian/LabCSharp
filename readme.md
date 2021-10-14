@@ -619,12 +619,12 @@ int end = int.Parse(Console.ReadLine());
 
 if(start < end)
 {
-  for(int i = x; i <= y; i++)
+  for(int i = start; i <= end; i++)
     Console.Write(i + " ");
 }
 else
 {
-  for(int i = x; i >= y; i--)
+  for(int i = start; i >= end; i--)
     Console.Write(i + " ");
 }
 ```
@@ -633,9 +633,13 @@ else
 
 ## ⭐ Zadanie 2 [➥](#-content)
 
-<!---
-//losowanie
--->
+Napisz program, który losuje liczbę od 0 do 999 i pozwala użytkownikowi na podanie liczby. Po jej podaniu informuje użytkownika czy podana liczba jest większa, czy mniejsza. W przypadku podania poprawnej liczby użytkownik jest o tym informowany, a program kończy zadanie. Przydatny może okazać się wiedza jak uzyskiwać liczby pseudolosowe:
+
+```c#
+Random rng = new Random();
+int nbr = rng.Next() % max;
+Console.WriteLine(Name[nbr]);
+```
 
 ## ⭐ Zadanie 3 [➥](#-content)
 
@@ -759,10 +763,27 @@ String[] list = str.Split(" ");
 double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
 ```
 
+Następne zadanie będzie polegało na stworzeniu tablicy liczb oraz znalezieniu w niej wartości największej, najmniejszej oraz policzenie średniej. Być może okaże się pomocne ustawienie zmiennej na wartość `∞`/`-∞` 
+
+```c#
+double positive = double.PositiveInfinity;
+double negative = double.NegativeInfinity;
+```
+
 ## ⭐ Zadanie 4 [➥](#-content)
+
+Stworzyć 
 
 <!---
 Sortowanie
+
+Sortowanie bombelkow
+
+Sortowanie z czempionem
+
+
+
+
 -->
 
 ## ⭐ Zadanie 5 [➥](#-content)
@@ -866,6 +887,7 @@ List<string> array = new List<string>();
 
 <!---
 Rozwiązanie:
+
 -->
 
 # 9. Strings [➥](#-content)
