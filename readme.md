@@ -636,6 +636,11 @@ Console.WriteLine(nbr);
 ```
 
 Następnie można zmodyfikować program tak, aby wartość początkowa i końcowa przedziału też były ustawiane losowo, ale w granicach rozsądku 😁
+Aby losować liczby z danego przedziału trzeba nieco bardzeij zmodyfikować wartość wylosowaną:
+
+```c#
+int nbr = min + (rng.Next() % (max + 1 - min));
+```
 
 ## ⭐ Zadanie 3 [➥](#-content)
 
