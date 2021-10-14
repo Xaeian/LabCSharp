@@ -632,9 +632,11 @@ Napisz program, który losuje liczbę od 0 do 999 i pozwala użytkownikowi na po
 
 ```c#
 Random rng = new Random();
-int nbr = rng.Next() % max;
-Console.WriteLine(Name[nbr]);
+int nbr = rng.Next() % (max - 1);
+Console.WriteLine(nbr);
 ```
+
+Następnie można zmodyfikować program tak, aby wartość początkowa i końcowa przedziału też były ustawiane losowo, ale w granicach rozsądku 😁
 
 ## ⭐ Zadanie 3 [➥](#-content)
 
