@@ -590,6 +590,8 @@ Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `st
 
 Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`.
 
+<!---
+
 Pętla `while`:
 
 ```c#
@@ -626,6 +628,8 @@ else
     Console.Write(i + " ");
 }
 ```
+
+-->
 
 ## ⭐ Zadanie 2 [➥](#-content)
 
