@@ -140,7 +140,7 @@ Math.Log10(x)
 Math.Exp(x) // e^x
 ```
 
-# 3. Switch...Case [➥](#-content)
+# 3. Switch-Case [➥](#-content)
 
 Instrukcja `switch` stosujemy wówczas gdy chcemy przeskoczyć do odpowiedniego miejsca w kodzie oznaczonego jako `case`
 w zależności od wartości jaką przyjmuje zmienna `option`.
@@ -282,7 +282,7 @@ Wartość `option` to zaledwie jeden znak, więc zadeklarujmy go jako `char`. B�
 
 Zamieńmy też operacje arytmetyczne na ich skrócone wersje oraz
 
-# 5. If...Else [➥](#-content)
+# 5. If-Else [➥](#-content)
 
 Instrukcja `switch...case` rewelacyjnie sprawdza się przy ograniczonej liczbie opcji. W przypadku, gdy opcji jest więcej, a niekiedy jest ich nieskończenie wiele to z pomocą przychodzi konstrukcja `if...else`
 
@@ -877,11 +877,6 @@ Lepiej użyć **listy**, ponieważ nie jesteśmy ograniczeni jej długością. L
 ```c#
 List<string> array = new List<string>();
 ```
-
-<!---
-Rozwiązanie:
-
--->
 
 # 9. Strings [➥](#-content)
 
