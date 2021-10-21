@@ -640,6 +640,7 @@ Console.WriteLine(nbr);
 ```
 
 Następnie można zmodyfikować program tak, aby wartość początkowa i końcowa przedziału też były ustawiane losowo, ale w granicach rozsądku 😁
+Powiedzmy, że nasze liczby mają być czterocyfrowe a przedział minimalnie ma wynośić 1000.
 Aby losować liczby z danego przedziału trzeba nieco bardzeij zmodyfikować wartość wylosowaną:
 
 ```c#
@@ -777,7 +778,7 @@ double negative = double.NegativeInfinity;
 
 ## ⭐ Zadanie 4 [➥](#-content)
 
-Wypełnić **20** elementową tablicę losowymi wartościami od **0** do **99**. Wyświetlić jej zawartość. Nastpnie posortowac za pomocą dowolnego algorytmu sortowania.
+Wypełnić `n` elementową tablicę losowymi wartościami od **0** do **99**. Wyświetlić jej zawartość, gdzie `n` jest podawane przez użytkownika. Nastpnie posortowac za pomocą dowolnego algorytmu sortowania.
 
 ## ⭐ Zadanie 5 [➥](#-content)
 
