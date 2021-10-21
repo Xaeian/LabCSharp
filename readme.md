@@ -2,9 +2,9 @@
 
 - 1\. [Environment](#1-environment-) - Konfiguracja środowiska
 - 2\. [Input-Output](#2-input-output-) - Wejście i wyjście konsoli
-- 3\. [Switch...Case](#3-switch-case-) - Warunek wielokrotnego wyboru
+- 3\. [Switch-Case](#3-switch-case-) - Warunek wielokrotnego wyboru
 - 4\. [Arithmetic operators](#4-arithmetic-operators-) - Operacje arytmetyczne
-- 5\. [If...Else](#5-if-else-) - Instrukcje warunkowe
+- 5\. [If-Else](#5-if-else-) - Instrukcje warunkowe
   - [Zadanie 1](#-zadanie-1-) - Obliczanie miejsc zerowych paraboli
 - 6\. [While-For](#6-while-for-) - Pętle
   - [Zadanie 2](#-zadanie-2-) - Gra! Znajdowanie wylosowanej liczby
@@ -757,7 +757,7 @@ Naszym zadaniem będzie przkształcenie tego łańcucha znaków na tablicę typu
 { 12 45 56.5 8 94 }
 ```
 
-Do realizaji tego zadania pomocna może okazać się metoda `Split1`
+Do realizaji tego zadania pomocna może okazać się metoda `Split`
 
 ```c#
 string str = Console.ReadLine();
@@ -777,19 +777,7 @@ double negative = double.NegativeInfinity;
 
 ## ⭐ Zadanie 4 [➥](#-content)
 
-Stworzyć 
-
-<!---
-Sortowanie
-
-Sortowanie bombelkow
-
-Sortowanie z czempionem
-
-
-
-
--->
+Wypełnić **20** elementową tablicę losowymi wartościami od **0** do **99**. Wyświetlić jej zawartość. Nastpnie posortowac za pomocą dowolnego algorytmu sortowania.
 
 ## ⭐ Zadanie 5 [➥](#-content)
 
