@@ -14,10 +14,8 @@
   - [Zadanie 5](#-zadanie-5-) - Poszukiwania liczb pierwszych `#2`
 - 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
   - [Zadanie 6](#-zadanie-6-) - Poszukiwania liczb pierwszych `#3`
-- 9\. [Strings](#8-strings-) - Operacje na łańcuchach znaków
-  - [Zadanie 7](#-zadanie-7-)
-- 10\. [Files](#8-files-) - Operacje na plikach
-  - [Zadanie 8](#-zadanie-8-) - Obróbka pliku `.csv`
+- 9\. [Files](#9-files-) - Operacje na plikach
+  - [Zadanie 7](#-zadanie-7-) - Obróbka pliku `.csv`
 
 # 1. Environment [➥](#-content)
 
@@ -391,8 +389,6 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
 - Wyświetlenie wartości `y` jako rezultat
 - Zająć się przebiegami **A** i **B** . W przebiegu **C** można użyć tylko jednej instrukcji `if` - bez `if else`
 
-<!---
-
 Przebieg B:
 
 ```c#
@@ -434,13 +430,10 @@ namespace workspace
 }
 ```
 
--->
-
 ## ⭐ Zadanie 1 [➥](#-content)
 
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji: ![y=ax^2+bx+c](https://render.githubusercontent.com/render/math?math=y=ax^2%2Bbx%2Bc) Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
-<!---
 Rozwiązanie:
 
 ```c#
@@ -498,7 +491,6 @@ namespace workspace
   }
 }
 ```
---->
 
 # 6. While-For [➥](#-content)
 
@@ -590,7 +582,6 @@ Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `st
 
 Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`.
 
-<!---
 Pętla `while`:
 
 ```c#
@@ -627,7 +618,6 @@ else
     Console.Write(i + " ");
 }
 ```
--->
 
 ## ⭐ Zadanie 2 [➥](#-content)
 
@@ -879,11 +869,7 @@ Lepiej użyć **listy**, ponieważ nie jesteśmy ograniczeni jej długością. L
 List<string> array = new List<string>();
 ```
 
-# 9. Strings [➥](#-content)
-
-## ⭐ Zadanie 7 [➥](#-content)
-
-# 10. Files [➥](#-content)
+# 9. Files [➥](#-content)
 
 Aby korzystać w prostszy sposób z metod wczytywania i zapisu do plików dodajmy do przestrzeni nazw bibliotekę `System.IO`:
 
@@ -937,10 +923,15 @@ File.WriteAllText("./output.csv", output);
 
 Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
 
-## ⭐ Zadanie 8 [➥](#-content)
+## ⭐ Zadanie 7 [➥](#-content)
 
 Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`.
 
+
 <!---
-modyfikacja / pochodna / całka
+# 10. Strings and Regex [➥](#-content)
+# 11. Methods/Functions [➥](#-content)
+# 12. Classes [➥](#-content)
+# 13. Json [➥](#-content)
+# 14. Database [➥](#-content)
 --->
