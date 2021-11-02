@@ -5,19 +5,11 @@
 - 3\. [Switch-Case](#3-switch-case-) - Warunek wielokrotnego wyboru
 - 4\. [Arithmetic operators](#4-arithmetic-operators-) - Operacje arytmetyczne
 - 5\. [If-Else](#5-if-else-) - Instrukcje warunkowe
-  - [Zadanie 1](#-zadanie-1-) - Obliczanie miejsc zerowych paraboli
 - 6\. [While-For](#6-while-for-) - Pętle
-  - [Zadanie 2](#-zadanie-2-) - Gra! Znajdowanie wylosowanej liczby
-  - [Zadanie 3](#-zadanie-3-) - Poszukiwania liczb pierwszych `#1`
 - 7\. [Arrays](#7-arrays-) - Tablice
-  - [Zadanie 4](#-zadanie-4-) - Sortowanie elementów z tablicy
-  - [Zadanie 5](#-zadanie-5-) - Poszukiwania liczb pierwszych `#2`
 - 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
-  - [Zadanie 6](#-zadanie-6-) - Poszukiwania liczb pierwszych `#3`
 - 9\. [Date](#9-date-) - Data i godzina
-  - [Zadanie 7](#-zadanie-7-) - Operacja na czasie
 - 10\. [Files](#9-files-) - Operacje na plikach
-  - [Zadanie 8](#-zadanie-7-) - Obróbka pliku `.csv`
 
 # 1. Environment [➥](#-content)
 
@@ -966,7 +958,7 @@ File.WriteAllText("./output.csv", output);
 
 Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
 
-## ⭐ Zadanie 7 [➥](#-content)
+## ⭐ Zadanie 8 [➥](#-content)
 
 Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`.
 
