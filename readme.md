@@ -14,8 +14,10 @@
   - [Zadanie 5](#-zadanie-5-) - Poszukiwania liczb pierwszych `#2`
 - 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
   - [Zadanie 6](#-zadanie-6-) - Poszukiwania liczb pierwszych `#3`
-- 9\. [Files](#9-files-) - Operacje na plikach
-  - [Zadanie 7](#-zadanie-7-) - Obróbka pliku `.csv`
+- 9\. [Date](#9-date-) - Data i godzina
+  - [Zadanie 7](#-zadanie-7-) - Operacja na czasie
+- 10\. [Files](#9-files-) - Operacje na plikach
+  - [Zadanie 8](#-zadanie-7-) - Obróbka pliku `.csv`
 
 # 1. Environment [➥](#-content)
 
@@ -54,7 +56,7 @@ Polecam podczas instalacji zaznaczyć 2 checkbox-y. Jeden z dodaniem to menu kon
 Jak prosto się domyśleć **VSC** nie _wspiera wszystkiego_ tak z bomby. Wówczas instalka ważyłaby 100GB a nie niecałe 100MB. Żeby wygodnie pracować z **C#** musimy zainstalować odpowiednie rozszerzenia:
 
 - **C#** for Visual Studio Code
-- **Prettier - Code formatter** - Simon Siefke 
+- **Prettier - Code formatter** - Simon Siefke
 - **Code Runner**
 
 Na szczęście nie musimy ich szukać po Internecie. Nasz edytor ma wbudowany menażer rozszerzeń
@@ -759,7 +761,7 @@ String[] list = str.Split(" ");
 double[] table = Array.ConvertAll(str.Split(mychars), new Converter<string, double>(double.Parse));
 ```
 
-Następne zadanie będzie polegało na stworzeniu tablicy liczb oraz znalezieniu w niej wartości największej, najmniejszej oraz policzenie średniej. Być może okaże się pomocne ustawienie zmiennej na wartość `∞`/`-∞` 
+Następne zadanie będzie polegało na stworzeniu tablicy liczb oraz znalezieniu w niej wartości największej, najmniejszej oraz policzenie średniej. Być może okaże się pomocne ustawienie zmiennej na wartość `∞`/`-∞`
 
 ```c#
 double positive = double.PositiveInfinity;
@@ -869,6 +871,47 @@ Lepiej użyć **listy**, ponieważ nie jesteśmy ograniczeni jej długością. L
 List<string> array = new List<string>();
 ```
 
+# 9. Date [➥](#-content)
+
+Operacje na datach są na tyle często wykonywane, że w każdym języku wysokopoziomowym jest przygotowana specjalna klasa, która prawdopodobnie zawiera większość niezbędnych funkcji. Język **C#** nie jest wyjątkiem.
+
+```c#
+DateTime date = new DateTime(2021, 12, 1, 12, 0, 0);
+// year, month, day, hour, minute, second
+```
+
+Aby zmodyfikować datę można skorzystać z poniższych metod
+
+```c#
+DateTime dt1 = date.AddSeconds(30);
+DateTime dt2 = date.AddMinutes(-5);
+DateTime dt3 = date.AddHours(2);
+DateTime dt4 = date.AddDays(7);
+DateTime dt5 = date.AddMonths(-3);
+DateTime dt6 = date.AddYears(1);
+```
+
+Podczas wyświetlania daty należy podać jej format
+
+```c#
+date.ToString("yyyy-MM-dd HH:mm:ss"); // 2021-12-01 12:00:00
+```
+
+## ⭐ Zadanie 7 [➥](#-content)
+
+Napisać program pobierający jako 2 pierwsze argumenty **datę** i **godzinę**. Na ich podstawie nadleży stworzyć obiekt `DateTime`. Kolejne wprowadzone argumenty będą modyfikatorami tego obiektu w składni: `{nbr}{unit}`. `{nbr}` jest liczbą (może być ujemne), a `{unit}` jedną z jednostek:
+- `s` - sekunda
+- `m` - minuta
+- `h` - godzina
+- `d` - dzień
+- `mo` - miesiąc
+- `y` - rok
+
+Example:
+
+    2021-12-01 12:00:00 -1d +30m
+    >> 2021-11-30 12:30:00
+
 # 9. Files [➥](#-content)
 
 Aby korzystać w prostszy sposób z metod wczytywania i zapisu do plików dodajmy do przestrzeni nazw bibliotekę `System.IO`:
@@ -926,7 +969,6 @@ Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczeni
 ## ⭐ Zadanie 7 [➥](#-content)
 
 Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`.
-
 
 <!---
 # 10. Strings and Regex [➥](#-content)
