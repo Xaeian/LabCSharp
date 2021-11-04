@@ -9,7 +9,8 @@
 - 7\. [Arrays](#7-arrays-) - Tablice
 - 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
 - 9\. [Date](#9-date-) - Data i godzina
-- 10\. [Files](#9-files-) - Operacje na plikach
+- 10\. [Files](#10-files-) - Operacje na plikach
+- 11\. [Regular expression](#11-regular-expression-) - Wyrażenia regularne
 
 # 1. Environment [➥](#-content)
 
@@ -961,6 +962,44 @@ Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczeni
 ## ⭐ Zadanie 8 [➥](#-content)
 
 Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`. Wszystkie trzy przebiegi wyświetlić za pomocą dowolnego oprogramowania _(może być excel)_
+
+## 11 Regular expression
+
+Aby korzystać w prostszy sposób z wyrażeń regularnych, należy dołączyć `System.Text.RegularExpressions`:
+
+```c#
+using System;
+using System.Text.RegularExpressions;
+```
+
+Wyrażenie regularne tworzymy za pomocą klasy `Regex`
+
+```c#
+Regex letter = new Regex("[a-z]+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+Regex number = new Regex("[0-9-]+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+```
+
+Aby pobierać pierwszą pasującą frazę z łańcuhca znaków `text` należy użyć metody `Match` na wyreżeniu regularnym. Metoda zwraca objekt `Match`, który zawiera znalezioną frazę oraz jej pozycje w łańcychu znaków.
+
+```c#
+Match matchNumber = number.Match(text);
+Console.WriteLine($"value:{matchNumber.Value} position:{matchNumber.Index}");
+
+Match matchLetter = letter.Match(text);
+Console.WriteLine($"value:{matchLetter.Value} position:{matchLetter.Index}");
+```
+
+Jeżeli chcemy pobrać kolejną należy na zwróconym elemencie wykonać motodę `Next`
+
+```c#
+Match matchNumberNext = matchNumber.NextMatch();
+Match matchLetterNext = matchLetter.NextMatch();
+```
+
+Wyrażenia regularne wykorzystuje się również podczas walidacji:
+
+
+
 
 <!---
 # 10. Strings and Regex [➥](#-content)
