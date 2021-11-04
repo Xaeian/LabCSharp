@@ -10,7 +10,7 @@
 - 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
 - 9\. [Date](#9-date-) - Data i godzina
 - 10\. [Files](#10-files-) - Operacje na plikach
-- 11\. [Regular expression](#11-regular-expression-) - Wyrażenia regularne
+- 11\. [Regular expression](#11-Regular-expression-) - Wyrażenia regularne
 
 # 1. Environment [➥](#-content)
 
@@ -425,7 +425,7 @@ namespace workspace
 }
 ```
 
-## ⭐ Zadanie 1 [➥](#-content)
+## ⭐ Zadanie 1
 
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji: ![y=ax^2+bx+c](https://render.githubusercontent.com/render/math?math=y=ax^2%2Bbx%2Bc) Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
@@ -614,7 +614,7 @@ else
 }
 ```
 
-## ⭐ Zadanie 2 [➥](#-content)
+## ⭐ Zadanie 2
 
 Napisz program, który losuje liczbę od 0 do 999 i pozwala użytkownikowi na podanie liczby. Po jej podaniu informuje użytkownika czy podana liczba jest większa, czy mniejsza. W przypadku podania poprawnej liczby użytkownik jest o tym informowany, a program kończy zadanie. Przydatny może okazać się wiedza jak uzyskiwać liczby pseudolosowe:
 
@@ -632,7 +632,7 @@ Aby losować liczby z danego przedziału trzeba nieco bardzeij zmodyfikować war
 int nbr = min + (rng.Next() % (max + 1 - min));
 ```
 
-## ⭐ Zadanie 3 [➥](#-content)
+## ⭐ Zadanie 3
 
 Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby. Liczby pierwsze są podzielne przez 1 i samą siebie. Warto skorzystać z Sita Eratostenesa.
 
@@ -761,11 +761,11 @@ double positive = double.PositiveInfinity;
 double negative = double.NegativeInfinity;
 ```
 
-## ⭐ Zadanie 4 [➥](#-content)
+## ⭐ Zadanie 4
 
 Wypełnić `n` elementową tablicę losowymi wartościami od **0** do **99**. Wyświetlić jej zawartość, gdzie `n` jest podawane przez użytkownika. Nastpnie posortowac za pomocą dowolnego algorytmu sortowania.
 
-## ⭐ Zadanie 5 [➥](#-content)
+## ⭐ Zadanie 5
 
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
@@ -846,7 +846,7 @@ for(int i = 0; i < args.Length; i++)
 }
 ```
 
-## ⭐ Zadanie 6 [➥](#-content)
+## ⭐ Zadanie 6
 
 Oczywiście modyfikujemy program z liczbami pierwszymi, tak aby wykorzystać metodę pobierania zmiennych poprzez argumenty. Żeby jednak nie było za prosto teraz podajemy przedział z którego mają być wyświetlane liczby.
 
@@ -890,7 +890,7 @@ Podczas wyświetlania daty należy podać jej format
 date.ToString("yyyy-MM-dd HH:mm:ss"); // 2021-12-01 12:00:00
 ```
 
-## ⭐ Zadanie 7 [➥](#-content)
+## ⭐ Zadanie 7
 
 Napisać program pobierający jako 2 pierwsze argumenty **datę** i **godzinę**. Na ich podstawie nadleży stworzyć obiekt `DateTime`. Kolejne wprowadzone argumenty będą modyfikatorami tego obiektu w składni: `{nbr}{unit}`. `{nbr}` jest liczbą (może być ujemne), a `{unit}` jedną z jednostek:
 - `s` - sekunda
@@ -959,11 +959,11 @@ File.WriteAllText("./output.csv", output);
 
 Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczenia jak skalowanie, całkowanie to uzyskamy całkiem użyteczną aplikację.
 
-## ⭐ Zadanie 8 [➥](#-content)
+## ⭐ Zadanie 8
 
 Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`. Wszystkie trzy przebiegi wyświetlić za pomocą dowolnego oprogramowania _(może być excel)_
 
-## 11 Regular expression
+# 11 Regular expression [➥](#-content)
 
 Aby korzystać w prostszy sposób z wyrażeń regularnych, należy dołączyć `System.Text.RegularExpressions`:
 
