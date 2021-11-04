@@ -930,7 +930,7 @@ foreach (string line in lines) Console.WriteLine(line); // Display
 File.WriteAllLines("./output.csv", lines); // Save
 ```
 
-Pora napisać program. Niech wczytuje plik w formacie [`data.csv`]("./data.csv"). W pliku są 2 kolumny. Jedna z nich to prąd, a druga napięcie. Zadeklarujmy zatem dwie tablice i umieśćmy w nich wczytane dane. Na koniec odbudujmy plik `csv`.
+Pora napisać program. Niech wczytuje plik w formacie [`data.csv`]("./blob/main/data.csv"). W pliku są 2 kolumny. Jedna z nich to prąd, a druga napięcie. Zadeklarujmy zatem dwie tablice i umieśćmy w nich wczytane dane. Na koniec odbudujmy plik `csv`.
 
 ```c#
 string[] lines = File.ReadAllLines("./data.csv");
