@@ -904,7 +904,7 @@ Example:
     2021-12-01 12:00:00 -1d +30m
     >> 2021-11-30 12:30:00
 
-# 9. Files [➥](#-content)
+# 10. Files [➥](#-content)
 
 Aby korzystać w prostszy sposób z metod wczytywania i zapisu do plików dodajmy do przestrzeni nazw bibliotekę `System.IO`:
 
@@ -960,7 +960,7 @@ Aplikacja taka wydaje się bezużyteczna jednaka, gdy dodamy dodatkowe obliczeni
 
 ## ⭐ Zadanie 8 [➥](#-content)
 
-Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`.
+Mając przebiegi prądu i napięcia dodaj charakterystykę mocy chwilowej oraz umieść ją w wyjściowym pliku `.csv`. Wszystkie trzy przebiegi wyświetlić za pomocą dowolnego oprogramowania _(może być excel)_
 
 <!---
 # 10. Strings and Regex [➥](#-content)
