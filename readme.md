@@ -222,7 +222,7 @@ Pobierzmy z konsoli zmienną `x` oraz `y`, a następnie wykonajmy operacje arytm
 | Odejmopwanie       |   `-`    | x = x - y  | x -= y         |
 | Mnożenie           |   `*`    | x = x \* y | x \*= y        |
 | Dzielenie          |   `/`    | x = x / y  | x /= y         |
-| Reszta z dzielenia |   `%`    | x = x % y  | x /= y         |
+| Reszta z dzielenia |   `%`    | x = x % y  | x %= y         |
 | Inkrementacja      |   `++`   | x++        | x += 1         |
 | Dekrementacja      |   `--`   | x--        | x -= 1         |
 
