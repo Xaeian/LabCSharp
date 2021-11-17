@@ -687,7 +687,6 @@ Wypisanie wszystkich elementów tablicy można zrealizować oczywiście za pomoc
 for(int i = 0; i < nbrs.Length; i++)
   Console.WriteLine("nbrs[" + i + "] = " + nbrs[i]);
 ```
-
     nbrs[0] = 12
     nbrs[1] = 45
     nbrs[2] = 56,5
@@ -703,7 +702,7 @@ foreach(double x in nbrs)
 
     12 45 56,5 8 94
 
-W tej pętli deklarowana jest zmienna pomocnicza. W naszym przypadku `nbr_i` i podczas kolejnych iteracji umieszczane w nim są kolejne elementy z tablicy.
+W tej pętli deklarowana jest zmienna pomocnicza. W naszym przypadku `x` i podczas kolejnych iteracji umieszczane w nim są kolejne elementy z tablicy.
 
 Jak już torszkę ogarniamy pętle i tablicę można by napisać program, który pobiera od użytkownika długość tablicy, a następnie wszystkie jej elementy. W zależności od wybranej operacji wykona ją na całej podanej tablicy, a na końcu wyrzuci na konsolę tablicę wynikową.
 
