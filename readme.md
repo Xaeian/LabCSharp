@@ -672,33 +672,33 @@ Tablice możemy zadeklarować na 2 sposoby.
 Deklarując pustą tablicę o długości `n`.
 
 ```c#
-double[] nbr = new double[n];
+double[] nbrs = new double[n];
 ```
 
 Wprowadzając do tablicy konkretne wartości
 
 ```c#
-double[] nbr = { 12, 45, 56.5, 8, 94 };
+double[] nbrs = { 12, 45, 56.5, 8, 94 };
 ```
 
 Wypisanie wszystkich elementów tablicy można zrealizować oczywiście za pomocą pętli `for`
 
 ```c#
-for(int i = 0; i < nbr.Length; i++)
-  Console.WriteLine("nbr[" + i + "] = " + nbr[i]);
+for(int i = 0; i < nbrs.Length; i++)
+  Console.WriteLine("nbrs[" + i + "] = " + nbrs[i]);
 ```
 
-    nbr[0] = 12
-    nbr[1] = 45
-    nbr[2] = 56,5
-    nbr[3] = 8
-    nbr[4] = 94
+    nbrs[0] = 12
+    nbrs[1] = 45
+    nbrs[2] = 56,5
+    nbrs[3] = 8
+    nbrs[4] = 94
 
 Jednak, gdy nie jest potrzebny nam index tablicy, to bardziej elegancko użyć jest pętli `foreach`.
 
 ```c#
-foreach(double nbr_i in nbr)
-    Console.Write(nbr_i + " ");
+foreach(double x in nbrs)
+    Console.Write(x + " ");
 ```
 
     12 45 56,5 8 94
@@ -721,12 +721,12 @@ Gdzie `y` jest liczbą podaną przez użytkownika.
 Console.Write("Length: ");
 int n = int.Parse(Console.ReadLine());
 
-double[] arr = new double[n];
+double[] array = new double[n];
 
 for(int i = 0; i < n; i++)
 {
   Console.Write("Element[" + i + "]: ");
-  arr[i] = double.Parse(Console.ReadLine());
+  array[i] = double.Parse(Console.ReadLine());
 }
 
 // TODO:
@@ -734,7 +734,7 @@ for(int i = 0; i < n; i++)
 Console.Write("Output:");
 for(int i = 0; i < n; i++)
 {
-  Console.Write(" " + arr[i]);
+  Console.Write(" " + array[i]);
 }
 ```
 
@@ -845,7 +845,7 @@ double[] x = new double[args.Length - 2];
 double y = double.Parse(args[0]);
 string opt = args[1];
 
-for(int i = 0; i < args.Length; i++)
+for(int i = 0; i < args.Length - 2; i++)
 {
   x[i] = double.Parse(args[i + 2]);
 }
@@ -866,7 +866,12 @@ int[] array = new int[1000];
 Lepiej użyć **listy**, ponieważ nie jesteśmy ograniczeni jej długością. Lista to taka dyamiczna tablica.
 
 ```c#
-List<string> array = new List<string>();
+using System;
+using System.Collections.Generic;
+```
+
+```c#
+List<int> array = new List<int>();
 ```
 
 # 9. Date [➥](#-content)
