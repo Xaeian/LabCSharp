@@ -510,7 +510,6 @@ namespace workspace
 ```
 -->
 
-
 # 6. While-For [➥](#-content)
 
 Najbardziej podstawową pętlą jest pętla `while`. Wystarczy zawrzeć wewnątrz `()` warunek i do puki jest on spełniony pętla będzie wykonywana. W przykładnie wypiszemy liczby **od 0 do 9**
@@ -706,6 +705,7 @@ Wypisanie wszystkich elementów tablicy można zrealizować oczywiście za pomoc
 for(int i = 0; i < nbrs.Length; i++)
   Console.WriteLine("nbrs[" + i + "] = " + nbrs[i]);
 ```
+
     nbrs[0] = 12
     nbrs[1] = 45
     nbrs[2] = 56,5
@@ -921,6 +921,7 @@ date.ToString("yyyy-MM-dd HH:mm:ss"); // 2021-12-01 12:00:00
 ## ⭐ Zadanie 7
 
 Napisać program pobierający jako 2 pierwsze argumenty **datę** i **godzinę**. Na ich podstawie nadleży stworzyć obiekt `DateTime`. Kolejne wprowadzone argumenty będą modyfikatorami tego obiektu w składni: `{nbr}{unit}`. `{nbr}` jest liczbą (może być ujemne), a `{unit}` jedną z jednostek:
+
 - `s` - sekunda
 - `m` - minuta
 - `h` - godzina
@@ -1086,12 +1087,12 @@ class Program
 }
 ```
 
-Gdy grupa funkcji korzysta z tej zamej przestrzeni zmiennych warto wszystko wrzucić to jedneko worka. Takim workiem w programowaniu jest **klasa**
+Gdy grupa funkcji korzysta z tej samej przestrzeni zmiennych warto wszystko wrzucić to jedneko worka. Takim workiem w programowaniu jest **klasa**
 
 ```c#
 namespace project
 {
-  public class Hero
+  public class HeroClass
   {
     public string Name;
     private int Strength;
@@ -1105,13 +1106,13 @@ namespace project
       this.Intelligence = intelligence;
     }
 
-    public int GetStrength() { return Strength; }
-    public int GetDexterity() { return Dexterity; }
-    public int GetIntelligence() { return Intelligence; }
+    public int GetStrength() { return this.Strength; }
+    public int GetDexterity() { return this.Dexterity; }
+    public int GetIntelligence() { return this.Intelligence; }
 
-    public Hero(string name, string myclass)
+    public HeroConstructor(string name, string myclass)
     {
-      Name = name;
+      this.Name = name;
       switch(myclass)
       {
         case "warior": Init(8, 5, 2); break;
@@ -1126,8 +1127,12 @@ namespace project
   {
     static void Main(string[] args)
     {
-      Hero hero = new Hero("Edward Białykij", "sorcerer");
-      Console.WriteLine(hero.Name + " Str:{0} Dex:{1} Int:{2}", hero.GetStrength(), hero.GetDexterity(), hero.GetIntelligence());
+      HeroClass heroObject = new HeroConstructor("Edward Białykij", "sorcerer");
+      Console.WriteLine(heroObject.Name + " Str:{0} Dex:{1} Int:{2}",
+                        heroObject.GetStrength(),
+                        heroObject.GetDexterity(),
+                        heroObject.GetIntelligence()
+                        );
     }
   }
 }
@@ -1138,7 +1143,7 @@ W przykładzie na podstawie klasy `Hero` tworzymy nowego bohatera i wyświetlamy
 ```c#
 using System;
 
-namespace objectx2
+namespace project
 {
   public class Rand
   {
