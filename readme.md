@@ -1026,7 +1026,7 @@ Match matchLetterNext = matchLetter.NextMatch();
 
 Wyrażenia regularne wykorzystuje się również podczas walidacji:
 
-# 12. Methods/Class/Objects
+# 12. Methods/Class/Objects [➥](#-content)
 
 Umieszczanie wszystkich operacji w funkcji `Main` nie jest zbyt dobrą praktyką. Może okazać się to szczególnie słabe w przypadku dużych programów. Siadając po miesiącu (lub znacznie dłuższym czasie) do takiego kodu będziemy zmuszenie rozkminiać go od zera. Dlatego też nauka dobrych nawyków programowania strukturalnego oraz efektywne operowanie w przestrzeniach nazw tylko pozornie jest _opcjonalne_ do nauczenia. W dużych firmach jest to bezwzględny wymóg, który pozwala efektywnie dzielić pracę oraz korzystać z modułów przygotowanych przez innych bez zagłębiana się w kod. Rozwój takiego kodu również jest prostszy no i… w sumie każdy pod roku samodzielnej nauki programowania zmierza w tym kierunku.
 
@@ -1275,9 +1275,9 @@ namespace objectx2
 }
 ```
 
-# 13. Database
+# 13. Database [➥](#-content)
 
-# 14. JSON
+# 14. JSON [➥](#-content)
 
 ```c#
 using System;
