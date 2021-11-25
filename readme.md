@@ -11,8 +11,8 @@
 - 9\. [Date](#9-date-) - Data i godzina
 - 10\. [Files](#10-files-) - Operacje na plikach
 - 11\. [Regular expression](#11-regular-expression-) - Wyrażenia regularne
-- 12\. [Methods/Class/Objects](#12-methods-class-objects) - Metody, Klasy, obiekty
-- 13\. [JSON](#13-regular-expression-) - Format wymiany danych
+- 12\. [Methods-Class-Objects](#12-methods-class-objects-) - Metody, Klasy, obiekty
+- 13\. [JSON](#13-json-) - Format wymiany danych
 - 14\. [Database](#14-regular-expression-) - Bazy danych
 
 <!---
@@ -1027,7 +1027,7 @@ Match matchLetterNext = matchLetter.NextMatch();
 
 Wyrażenia regularne wykorzystuje się również podczas walidacji:
 
-# 12. Methods/Class/Objects [➥](#-content)
+# 12. Methods-Class-Objects [➥](#-content)
 
 Umieszczanie wszystkich operacji w funkcji `Main` nie jest zbyt dobrą praktyką. Może okazać się to szczególnie słabe w przypadku dużych programów. Siadając po miesiącu (lub znacznie dłuższym czasie) do takiego kodu będziemy zmuszenie rozkminiać go od zera. Dlatego też nauka dobrych nawyków programowania strukturalnego oraz efektywne operowanie w przestrzeniach nazw tylko pozornie jest _opcjonalne_ do nauczenia. W dużych firmach jest to bezwzględny wymóg, który pozwala efektywnie dzielić pracę oraz korzystać z modułów przygotowanych przez innych bez zagłębiana się w kod. Rozwój takiego kodu również jest prostszy no i… w sumie każdy pod roku samodzielnej nauki programowania zmierza w tym kierunku.
 
@@ -1280,6 +1280,7 @@ namespace project
 }
 ```
 
+# 13. JSON [➥](#-content)
 
     dotnet add package Newtonsoft.Json --version 13.0.1
 
@@ -1330,5 +1331,5 @@ namespace JsonSample
 }
 ```
 
-# 13. Database [➥](#-content)
+# 14. Database [➥](#-content)
 
