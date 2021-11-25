@@ -7,13 +7,13 @@
 - 5\. [If-Else](#5-if-else-) - Instrukcje warunkowe
 - 6\. [While-For](#6-while-for-) - Pętle
 - 7\. [Arrays](#7-arrays-) - Tablice
-- 8\. [Arguments](#8-argumenty-) - Argumenty z konsoli
+- 8\. [Arguments](#8-arguments-) - Argumenty z konsoli
 - 9\. [Date](#9-date-) - Data i godzina
 - 10\. [Files](#10-files-) - Operacje na plikach
-- 11\. [Regular expression](#11-Regular-expression-) - Wyrażenia regularne
-- 12\. [Methods/Class/Objects](#12-Methods-Class-Objects) - Metody, Klasy, obiekty
-- 13\. [JSON](#13-Regular-expression-) - Format wymiany danych
-- 14\. [Database](#14-Regular-expression-) - Bazy danych
+- 11\. [Regular expression](#11-regular-expression-) - Wyrażenia regularne
+- 12\. [Methods/Class/Objects](#12-methods-class-objects) - Metody, Klasy, obiekty
+- 13\. [JSON](#13-regular-expression-) - Format wymiany danych
+- 14\. [Database](#14-regular-expression-) - Bazy danych
 
 <!---
 ```c#
@@ -1092,7 +1092,7 @@ Gdy grupa funkcji korzysta z tej samej przestrzeni zmiennych warto wszystko wrzu
 ```c#
 namespace project
 {
-  public class HeroClass
+  public class Hero
   {
     public string Name;
     private int Strength;
@@ -1110,7 +1110,7 @@ namespace project
     public int GetDexterity() { return this.Dexterity; }
     public int GetIntelligence() { return this.Intelligence; }
 
-    public HeroConstructor(string name, string myclass)
+    public Hero(string name, string myclass)
     {
       this.Name = name;
       switch(myclass)
@@ -1127,11 +1127,11 @@ namespace project
   {
     static void Main(string[] args)
     {
-      HeroClass heroObject = new HeroConstructor("Edward Białykij", "sorcerer");
-      Console.WriteLine(heroObject.Name + " Str:{0} Dex:{1} Int:{2}",
-                        heroObject.GetStrength(),
-                        heroObject.GetDexterity(),
-                        heroObject.GetIntelligence()
+      Hero hero = new Hero("Edward Białykij", "sorcerer");
+      Console.WriteLine(hero.Name + " Str:{0} Dex:{1} Int:{2}",
+                        hero.GetStrength(),
+                        hero.GetDexterity(),
+                        hero.GetIntelligence()
                         );
     }
   }
@@ -1280,19 +1280,17 @@ namespace project
 }
 ```
 
-# 13. Database [➥](#-content)
 
-# 14. JSON [➥](#-content)
+    dotnet add package Newtonsoft.Json --version 13.0.1
+
 
 ```c#
 using System;
 using System.IO;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-//using Models;
+using Newtonsoft.Json; // Error
+using Newtonsoft.Json.Linq; // Error
 
-// dotnet add package NuGet.CommandLine --version 5.8.0
-// dotnet add package Newtonsoft.Json --version 12.0.3
+// 
 
 namespace JsonSample
 {
@@ -1302,18 +1300,19 @@ namespace JsonSample
     {
       string data = File.ReadAllText("./hero.json");
       JObject Hero = JObject.Parse(data);
-      //Console.WriteLine("Name: "+ Hero["Name"]);
-      //Console.WriteLine("Strength: " + Hero["Strength"]);
-      //Console.WriteLine("Dexterity: " + Hero["Dexterity"]);
-      //Console.WriteLine("Intelligence: " + Hero["Intelligence"]);
-      //Console.WriteLine("HP: " + Hero["HP"]);
-      //Console.WriteLine("MP: " + Hero["MP"]);
+
+      Console.WriteLine("Name: "+ Hero["Name"]);
+      Console.WriteLine("Strength: " + Hero["Strength"]);
+      Console.WriteLine("Dexterity: " + Hero["Dexterity"]);
+      Console.WriteLine("Intelligence: " + Hero["Intelligence"]);
+      Console.WriteLine("HP: " + Hero["HP"]);
+      Console.WriteLine("MP: " + Hero["MP"]);
       Console.Write("Array: ");
-      //foreach(string tmp in Hero["Array"])
-      //{
-        //Console.Write(tmp + ", ");
-      //}
-      Console.WriteLine(Hero.ToString());
+      foreach(string x in Hero["Array"])
+        Console.Write(x + " ");
+      
+      Hero["Strength"] = (int)Hero["Strength"] + 10;
+      File.WriteAllText("./hero.json", Hero.ToString());
     }
   }
 }
@@ -1327,6 +1326,9 @@ namespace JsonSample
   "Intelligence": 20,
   "HP": 40.6,
   "MP": 56.1,
-  "array": [1, 3]
+  "Array": [1, 3]
 }
 ```
+
+# 13. Database [➥](#-content)
+
