@@ -13,7 +13,7 @@
 - 11\. [Regular expression](#11-regular-expression-) - Wyrażenia regularne
 - 12\. [Methods-Class-Objects](#12-methods-class-objects-) - Metody, Klasy, obiekty
 - 13\. [JSON](#13-json-) - Format wymiany danych
-- 14\. [Database](#14-regular-expression-) - Bazy danych
+- 14\. [Database](#14-database-) - Bazy danych
 
 <!---
 ```c#
@@ -1308,9 +1308,9 @@ namespace JsonSample
       Console.WriteLine("Intelligence: " + Hero["Intelligence"]);
       Console.WriteLine("HP: " + Hero["HP"]);
       Console.WriteLine("MP: " + Hero["MP"]);
-      Console.Write("Array: ");
-      foreach(string x in Hero["Array"])
-        Console.Write(x + " ");
+      Console.Write("Items: ");
+      foreach(string item in Hero["Items"])
+        Console.Write(item + " ");
       
       Hero["Strength"] = (int)Hero["Strength"] + 10;
       File.WriteAllText("./hero.json", Hero.ToString());
@@ -1327,7 +1327,7 @@ namespace JsonSample
   "Intelligence": 20,
   "HP": 40.6,
   "MP": 56.1,
-  "Array": [1, 3]
+  "Items": ["Wand", "Boots"]
 }
 ```
 
