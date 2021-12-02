@@ -1284,14 +1284,11 @@ namespace project
 
     dotnet add package Newtonsoft.Json --version 13.0.1
 
-
 ```c#
 using System;
 using System.IO;
 using Newtonsoft.Json; // Error
 using Newtonsoft.Json.Linq; // Error
-
-// 
 
 namespace JsonSample
 {
@@ -1329,6 +1326,37 @@ namespace JsonSample
   "MP": 56.1,
   "Items": ["Wand", "Boots"]
 }
+```
+
+Możemy na do klasy `Hero` dodać metodę statyczną, która na podstawie pliku `json` stworzy nam bohatera. Taką funkcjonalność będziemy mogli wykorzystać do systemu zapisu stanu gry.
+
+```c#
+public static Hero Load(string name)
+{
+  name = name + ".json";
+  string heroString = File.ReadAllText(name)
+  JObject heroJson = JObject.Parse(heroString);
+  Hero hero = new Hero();
+  hero.Name = (string)heroJson["Name"];
+  hero.Strength = (int)heroJson["Strength"];
+  hero.Dexterity = (int)heroJson["Dexterity"];
+  hero.Intelligence = (int)heroJson["Intelligence"];
+  return hero;
+}
+```
+
+Takie użycie konstruktora wymusza ustawienie parametrów domyślnych
+
+```c#
+//public Hero(string name, string myclass)
+public Hero(string name = "", string myclass = "")
+```
+
+Teraz z poziomu funkcji `Main` możemy, zamiast tworzyć nowego bohatera stworzyć go na podstawie save'u
+
+```c#
+// Hero hero = new Hero("Edward Białykij", "sorcerer");
+Hero hero = Hero.Load("hero");
 ```
 
 # 14. Database [➥](#-content)
