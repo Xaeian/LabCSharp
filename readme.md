@@ -403,7 +403,6 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
 - Wyświetlenie wartości `y` jako rezultat
 - Zająć się przebiegami **A** i **B** . W przebiegu **C** można użyć tylko jednej instrukcji `if` - bez `if else`
 
-<!---
 Przebieg B:
 
 ```c#
@@ -444,13 +443,11 @@ namespace workspace
   }
 }
 ```
--->
 
 ## ⭐ Zadanie 1
 
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji: ![y=ax^2+bx+c](https://render.githubusercontent.com/render/math?math=y=ax^2%2Bbx%2Bc) Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
-<!---
 Rozwiązanie:
 
 ```c#
@@ -508,7 +505,6 @@ namespace workspace
   }
 }
 ```
--->
 
 # 6. While-For [➥](#-content)
 
@@ -659,7 +655,6 @@ int nbr = min + (rng.Next() % (max + 1 - min));
 
 Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby. Liczby pierwsze są podzielne przez 1 i samą siebie. Warto skorzystać z Sita Eratostenesa.
 
-<!---
 Rozwiązanie:
 
 ```c#
@@ -682,7 +677,6 @@ for(int i = 1; i <= end; i++)
   if(flag == true) Console.Write(i + " ");
 }
 ```
--->
 
 # 7. Arrays [➥](#-content)
 
@@ -794,7 +788,6 @@ Program wypisujący liczby peirwsze - poprzednie zadanie:
 
 Program taki jest dość wolny podczas szukania bardzo dużych liczb pierwszych. Dlatego, żeby go przyspieszyć będziemy zapisywać znalezione liczby pierwsze i sprawdzać dzielenie tylko przez liczby z tablicy. Ponieważ gdy liczba nie dzieli się przez wszystkie mniejsze od niej liczy pierwsze to tym bardziej nie dzieli się przez ich wielokrotności. Do dzieła!
 
-<!---
 Rozwiązanie:
 
 ```c#
@@ -828,7 +821,6 @@ for(int i = 2; i <= end; i++)
 
 for(int i = 0; i < k; i++) Console.Write(array[i] + " ");
 ```
--->
 
 # 8. Arguments [➥](#-content)
 
