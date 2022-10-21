@@ -403,7 +403,6 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
 - Wyświetlenie wartości `y` jako rezultat
 - Zająć się przebiegami **A** i **B** . W przebiegu **C** można użyć tylko jednej instrukcji `if` - bez `if else`
 
-<!---
 Przebieg B:
 
 ```c#
@@ -444,13 +443,11 @@ namespace workspace
   }
 }
 ```
--->
 
 ## ⭐ Zadanie 1
 
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji: ![y=ax^2+bx+c](https://render.githubusercontent.com/render/math?math=y=ax^2%2Bbx%2Bc) Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
-<!---
 Rozwiązanie:
 
 ```c#
@@ -508,7 +505,6 @@ namespace workspace
   }
 }
 ```
--->
 
 # 6. While-For [➥](#-content)
 
@@ -600,7 +596,6 @@ Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `st
 
 Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`.
 
-<!---
 Pętla `while`:
 
 ```c#
@@ -637,7 +632,7 @@ else
     Console.Write(i + " ");
 }
 ```
--->
+
 ## ⭐ Zadanie 2
 
 Napisz program, który losuje liczbę od 0 do 999 i pozwala użytkownikowi na podanie liczby. Po jej podaniu informuje użytkownika czy podana liczba jest większa, czy mniejsza. W przypadku podania poprawnej liczby użytkownik jest o tym informowany, a program kończy zadanie. Przydatny może okazać się wiedza jak uzyskiwać liczby pseudolosowe:
