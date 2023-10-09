@@ -403,7 +403,7 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
 - Wyświetlenie wartości `y` jako rezultat
 - Zająć się przebiegami **A** i **B** . W przebiegu **C** można użyć tylko jednej instrukcji `if` - bez `if else`
 
-Przebieg B:
+<!-- Przebieg B:
 
 ```c#
 using System;
@@ -442,13 +442,13 @@ namespace workspace
     }
   }
 }
-```
+``` -->
 
 ## ⭐ Zadanie 1
 
 Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji: ![y=ax^2+bx+c](https://render.githubusercontent.com/render/math?math=y=ax^2%2Bbx%2Bc) Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
-Rozwiązanie:
+<!-- Rozwiązanie:
 
 ```c#
 using System;
@@ -504,7 +504,7 @@ namespace workspace
     }
   }
 }
-```
+``` -->
 
 # 6. While-For [➥](#-content)
 
