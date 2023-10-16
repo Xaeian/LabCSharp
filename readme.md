@@ -596,43 +596,6 @@ Mając tą wiedze napisanie programu, który pobierze od użytkownika liczby `st
 
 Jak użyłem do tego zadania pętli `for` zmień go tak, aby wykorzystać pętle `while`. Gdy użyłeś `while` przkształć go tak, aby teraz użyć `for`.
 
-Pętla `while`:
-
-```c#
-Console.Write("start: ");
-int start = int.Parse(Console.ReadLine());
-Console.Write("end: ");
-int end = int.Parse(Console.ReadLine());
-
-while(start != end)
-{
-  Console.Write(start + " ");
-  if(start > end) start--;
-  else start++;
-}
-Console.Write(start + " ");
-```
-
-Pętla `for`:
-
-```c#
-Console.Write("start: ");
-int start = int.Parse(Console.ReadLine());
-Console.Write("end: ");
-int end = int.Parse(Console.ReadLine());
-
-if(start < end)
-{
-  for(int i = start; i <= end; i++)
-    Console.Write(i + " ");
-}
-else
-{
-  for(int i = start; i >= end; i--)
-    Console.Write(i + " ");
-}
-```
-
 ## ⭐ Zadanie 2
 
 Napisz program, który losuje liczbę od 0 do 999 i pozwala użytkownikowi na podanie liczby. Po jej podaniu informuje użytkownika czy podana liczba jest większa, czy mniejsza. W przypadku podania poprawnej liczby użytkownik jest o tym informowany, a program kończy zadanie. Przydatny może okazać się wiedza jak uzyskiwać liczby pseudolosowe:
