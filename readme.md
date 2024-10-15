@@ -17,17 +17,12 @@
 
 <!---
 ```c#
-static string[] Name =
-{
+static string[] Name = {
   // student list
 };
-
-static void Main(string[] args)
-{
-  Random rng = new Random();
-  int nbr = rng.Next() % Name.Length;
-  Console.WriteLine(Name[nbr]);
-}
+Random rng = new Random();
+int nbr = rng.Next() % Name.Length;
+Console.WriteLine(Name[nbr]);
 ```
 --->
 
@@ -79,7 +74,7 @@ Najgorsze za nami - mamy już wszystko żeby rozpocząć pracę!
 
 # 2. Input-Output [➥](#-content)
 
-Aplikacja konsolowa umieszczona jest w pewnej przestrzeni nazw `App` związanej z naszym projektem.
+Aplikacja konsolowa powinna być umieszczona w pewnej przestrzeni nazw `App` związanej z naszym projektem.
 Po odpaleniu aplikacji wykonywana jest funkcja `Main` umieszczona w klacie `Program`.
 
 ```c#
@@ -91,15 +86,21 @@ namespace App
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Guantanamera!");
+      Console.WriteLine("Hello World!");
     }
   }
 }
 ```
 
-Jedynym zadaniem naszej aplikacji jest wypisanie tekstu:
+Nowsze wersje **SDK** pozwalają na  upraszczenie składni, sprawiając, że jest ona mniej zbliżona do klasycznych języków programowania, a bardziej przypomina nowoczesne języki skryptowe, które kładą większy nacisk na minimalizm.
 
-    "Guantanamera!"
+```c#
+Console.WriteLine("Hello World!");
+```
+
+Pisząc bardziej rozbudowane programy, konieczne będzie korzystanie z rozbudowanej składni. Jednak na początku nauki uproszczona wersja zredukuje próg wejścia. Obie wersje będą działały identycznie, a jedynym zadaniem programu jest wyświetlenie tekstu:
+
+    Hello World!
 
 Z konsoli można także pobierać tekst wprowadzony przez użytkownika. Pozwala to tworzyć nieco bardziej użytkowe aplikacje.
 
@@ -123,9 +124,7 @@ pay = pay * (1 - tax);
 Console.WriteLine("Niestety po odprowadzeniu podatku zostanie ci " + pay + " zł");
 ```
 
-W przypadku wyświetlenia następuje domyślna konwerersja z `int` na `string`.
-W **C#** przyjęto konwencje, że konwersje związane z utratą danych trzeba wykonać ręcznie,
-natomiast w przypadku, gdy nie tracimy danych konwersje wykonywane są automatycznie
+W przypadku wyświetlenia następuje domyślna konwerersja z `int` na `string`. W **C#** przyjęto konwencje, że konwersje związane z utratą danych trzeba wykonać ręcznie, natomiast w przypadku, gdy nie tracimy danych konwersje wykonywane są automatycznie
 
 Konwersje automatyczne: `char` ⟶ `int` ⟶ `long` ⟶ `double` ⟶ `string`
 
@@ -133,7 +132,7 @@ Konwersje ręczne: `string` ⟶ `double` ⟶ `long` ⟶ `int` ⟶ `char`
 
 Wiedząc jak pobrać zmienną od urzytkownika, pobierz `x` oraz oblicz wartość funkcji.
 
-![fnc](<https://render.githubusercontent.com/render/math?math=\LARGE%20f(x)=\frac{x^{\pi/2}}{log_{10}(sqrt(\pi))}%2B2cos^2(x)e^{x}>)
+$$f(x)=\frac{x^\frac{\pi}{2}}{log_{10}(\sqrt[x]{\pi})} ⋅ \left| 3x \right| - 2cos^2(x)e^{x}$$
 
 Wyświetl ją z dokładnością do 4 miejsc po przecinku za pomocą linii kodu.
 
@@ -150,6 +149,7 @@ Math.Sqrt(x)
 Math.Cos(x)
 Math.Log10(x)
 Math.Exp(x) // e^x
+Math.Abs(x) // |x|
 ```
 
 # 3. Switch-Case [➥](#-content)
@@ -290,9 +290,9 @@ double y = double.Parse(Console.ReadLine());
 
     Wynik operacji: x / y = 6,666666666666667
 
-Wartość `option` to zaledwie jeden znak, więc zadeklarujmy go jako `char`. Będzie to wymagało dodatkowego `Parse`-owania oraz zamiany cudzysłowów podwójnych `"` na pojedyncze `'` w `case`-ach.
+Wartość `option` to zaledwie jeden znak, więc zadeklarujmy go jako `char`. Będzie to wymagało dodatkowego `Parse`-owania oraz zamiany cudzysłowów podwójnych `"` na pojedyncze `'` w `case`-ach. Dzieje się tak, ponieważ podwójny cudzysłów `"` jest używany do definiowania wartości typu `string`, a pojedynczy `'` służy do oznaczania pojedynczego znaku `char`.
 
-Zamieńmy też operacje arytmetyczne na ich skrócone wersje oraz
+Nie zaszkodzi zastąpić operacje arytmetyczne ich skróconymi wersjami. Gdy operator pojawia się bezpośrednio po znaku `=`, zamiast pisać `x = x + y`, można użyć krótszej formy `x += y`.
 
 # 5. If-Else [➥](#-content)
 
@@ -403,108 +403,73 @@ Aby w program był w pełni funkcjonalny trzeba jeszcze:
 - Wyświetlenie wartości `y` jako rezultat
 - Zająć się przebiegami **A** i **B** . W przebiegu **C** można użyć tylko jednej instrukcji `if` - bez `if else`
 
-<!-- Przebieg B:
+### Operator wyrażenia warunkowego
+
+Jeżeli chcemy, w zależności od jakiegoś warunku, przypisać zmiennej inną wartość, rzecz jasna możesz użyć poznanej składni `if..else`.
 
 ```c#
-using System;
+Console.Write("Ile masz jabłek? ");
+int hungryForApples = int.Parse(Console.ReadLine());
 
-namespace workspace
-{
-  class Program
-  {
-    static void Main(string[] args)
-    {
-      Console.Write("Podaj wartość x: ");
-      double x = double.Parse(Console.ReadLine());
-      double y;
-
-      if(x < -5)
-      {
-        y = 0.5 * x + 0.5;
-      }
-      else if(x < -2)
-      {
-        y = (1.44 * x * x) + (10 * x) + 16;
-      }
-      else if (x < 0)
-      {
-        y = Math.Sqrt(4 - x * x);
-      }
-      else if (x < 3)
-      {
-        y = 2;
-      }
-      else
-      {
-        y = -((double)3 / 4) * x + 4.25;
-      }
-      Console.WriteLine(y);
-    }
-  }
+if (hungryForApples > 8) {
+    hungryForApples = 8; // więcej nie uniesiesz
+} else {
+    hungryForApples -= 1; // zjadasz jedno jabłko
 }
-``` -->
+
+Console.WriteLine("Teraz masz " + hungryForApples + " jabłek");
+```
+
+Specjalnie na taką okoliczność został przygotowany _"operator warunkowy"_, znany również jako _"operator trójargumentowy"_ `?:`.
+
+```c#
+Console.Write("Ile masz jabłek? ");
+int hungryForApples = int.Parse(Console.ReadLine());
+
+hungryForApples = (hungryForApples > 8) ? 8 : hungryForApples - 1;
+
+Console.WriteLine("Teraz masz " + hungryForApples + " jabłek");
+```
+
+Małym zadaniem, które można teraz wykonać, jest przekształcenie kodu z przebiegu **C** przy użyciu poznanego operatora `?:`
+
+Podczas wykonywania zadań, podczas pobierania ciąg znaków z konsoli, dokonujemy konwersji i przypisujemy wartości do zmiennych popełniamy pewien błąd. Mianowicie nie srawdzamy, czy łańcuch znaków nadają się do konwersji. Jeśli oczekujemy liczby typu `double`, a użytkownik wprowadzi tekst, program może się wysypać, zwracając błąd. Aby tego uniknąć wystarczy użyć `TryParse`.
+
+```c#
+Console.Write("Podaj x: ");
+int x;
+if(int.TryParse(Console.ReadLine(), out x))
+{
+  Console.WriteLine("Konwersja powiodła się");
+}
+else
+{
+  Console.WriteLine("Konwersja NIE powiodła się");
+  return;
+}
+Console.WriteLine("Wartoś x = " + x);
+```
+
+Aby pobieranie zmiennej z konsoli nie zajmowało 10 linii kodu, możemy w sprytny sposób wykorzystać operator `?:`
+
+```cs
+int? x = (int.TryParse(Console.ReadLine(), out int res)) ? res : (int?)null;
+if(x == null) {
+  Console.WriteLine("Konwersja NIE powiodła się");
+  return;
+}
+Console.WriteLine("Wartoś x = " + x);
+```
+
+Wartość `?` po nazwie typu oznacza, że zmienna może przyjmować również wartość `null`. Oznacza to, że zmienna jest zadeklarowana, ale może nie mieć przypisanej żadnej wartości. Przykłady: `int?`, `double?`, `bool?`.
 
 ## ⭐ Zadanie 1
 
-Napisać program, który wylicza miejsca zerowe funkcji kwadratowej. Możesz tą funkcję pobrać od użytkownika jako zmienne `a`, `b`, `c` funkcji: ![y=ax^2+bx+c](https://render.githubusercontent.com/render/math?math=y=ax^2%2Bbx%2Bc) Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
+Napisać program, który wylicza miejsca zerowe funkcji kwadratowej oraz jej wierzchołek. Możesz tą funkcję pobrać od użytkownika jako wykładniki i przypisać do zmiennych `a`, `b`, `c`.
 
-<!-- Rozwiązanie:
+$$y=ax^2+bx+c$$
 
-```c#
-using System;
-
-namespace workspace
-{
-  class Program
-  {
-    static void Main(string[] args)
-    {
-      Console.Write("a: ");
-      double a = double.Parse(Console.ReadLine());
-
-      Console.Write("b: ");
-      double b = double.Parse(Console.ReadLine());
-
-      Console.Write("c: ");
-      double c = double.Parse(Console.ReadLine());
-
-      double delta = b * b - (4 * a *c);
-      double x1, x2;
-
-      if(a == 0)
-      {
-        if(b == 0)
-        {
-          if(c == 0) Console.WriteLine("Nieskończeni wiele rozwiązań");
-          else Console.WriteLine("Brak rozwiązań");
-          return;
-        }
-        x1 = c / b;
-        Console.WriteLine("x = " + x1);
-        return;
-      }
-
-      if(delta > 0)
-      {
-        x1 = (-b + Math.Sqrt(delta)) / (2 * a);
-        x2 = (-b - Math.Sqrt(delta)) / (2 * a);
-
-        Console.WriteLine("x1 = " + x1);
-        Console.WriteLine("x2 = " + x2);
-      }
-      else if(delta == 0)
-      {
-        x1 = -b / (2 * a);
-        Console.WriteLine("x = " + x1);
-      }
-      else
-      {
-        Console.WriteLine("Brak rozwiązań");
-      }
-    }
-  }
-}
-``` -->
+Pamiętaj o sytuacjach, kiedy niektóre parametry będą miały wartość `0`, a wówczas funkcja przestaje być parabolą.
 
 # 6. While-For [➥](#-content)
 
@@ -618,31 +583,6 @@ int nbr = min + (rng.Next() % (max + 1 - min));
 
 Napisać program, który wylicza wypisuje liczby pierwsze od 2 do podanej przez użytkownika liczby. Liczby pierwsze są podzielne przez 1 i samą siebie. Warto skorzystać z Sita Eratostenesa.
 
-<!---
-Rozwiązanie:
-
-```c#
-Console.Write("End: ");
-
-int end = int.Parse(Console.ReadLine());
-bool flag;
-
-for(int i = 1; i <= end; i++)
-{
-  flag = true;
-  for (int j = 2; j <= Math.Sqrt(i); j++)
-  {
-    if(i % j == 0)
-    {
-      flag = false;
-      break;
-    }
-  }
-  if(flag == true) Console.Write(i + " ");
-}
-```
--->
-
 # 7. Arrays [➥](#-content)
 
 Tablice możemy zadeklarować na 2 sposoby.
@@ -752,42 +692,6 @@ Wypełnić `n` elementową tablicę losowymi wartościami od **0** do **99**. Wy
 Program wypisujący liczby peirwsze - poprzednie zadanie:
 
 Program taki jest dość wolny podczas szukania bardzo dużych liczb pierwszych. Dlatego, żeby go przyspieszyć będziemy zapisywać znalezione liczby pierwsze i sprawdzać dzielenie tylko przez liczby z tablicy. Ponieważ gdy liczba nie dzieli się przez wszystkie mniejsze od niej liczy pierwsze to tym bardziej nie dzieli się przez ich wielokrotności. Do dzieła!
-
-<!---
-Rozwiązanie:
-
-```c#
-Console.Write("End: ");
-
-int end = int.Parse(Console.ReadLine());
-bool flag;
-int[] array = new int[1000];
-int k = 0;
-
-for(int i = 2; i <= end; i++)
-{
-  flag = true;
-  for(int j = 0; j < k; j++)
-  {
-    if(i % array[j] == 0)
-    {
-      flag = false;
-      break;
-    }
-
-    if(Math.Sqrt(array[j]) > i) break;
-  }
-
-  if(flag == true)
-  {
-    array[k] = i;
-    k++;
-  }
-}
-
-for(int i = 0; i < k; i++) Console.Write(array[i] + " ");
-```
--->
 
 # 8. Arguments [➥](#-content)
 
