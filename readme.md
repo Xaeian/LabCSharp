@@ -132,7 +132,7 @@ Konwersje ręczne: `string` ⟶ `double` ⟶ `long` ⟶ `int` ⟶ `char`
 
 Wiedząc jak pobrać zmienną od urzytkownika, pobierz `x` oraz oblicz wartość funkcji.
 
-$$f(x)=\frac{x^\frac{\pi}{2}}{log_{10}(\sqrt[x]{\pi})} ⋅ \left| 3x \right| - 2cos^2(x)e^{x}$$
+$$f(x)=\frac{x^\frac{\pi}{2}}{log_{10}(\sqrt[x]{\pi})} ⋅ \left| \sqrt{3}x \right| - 2cos^2(x)e^{x}$$
 
 Wyświetl ją z dokładnością do 4 miejsc po przecinku za pomocą linii kodu.
 
