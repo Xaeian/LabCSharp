@@ -18,6 +18,7 @@ Wyrażenia regularne (ang. *regular expressions* lub *regex*) to potężne narz�
 | `{n,}`  | Co najmniej `n` wystąpień                                    |
 | `{n,m}` | Od `n` do `m` wystąpień                                      |
 | `[]`    | Dowolny z określonych znaków                                 |
+| `[^]`   | Dowolny z **nie**-określonych znaków                         |
 | `\|`    | Alternatywa _(lub) _                                         |
 | `()`    | Grupa _(do tworzenia podwyrażeń)_                            |
 
