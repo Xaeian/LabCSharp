@@ -6,22 +6,23 @@ Wyrażenia regularne (ang. *regular expressions* lub *regex*) to potężne narz�
 
 ### Znaki Specjalne
 
-| Znak | Znaczenie                                |
-|------|------------------------------------------|
-| `.`  | Dowolny znak (oprócz znaku nowej linii)   |
-| `^`  | Początek linii                            |
-| `$`  | Koniec linii                              |
-| `*`  | Zero lub więcej wystąpień poprzedniego znaku |
-| `+`  | Jedno lub więcej wystąpień poprzedniego znaku |
-| `?`  | Zero lub jedno wystąpienie poprzedniego znaku (opcjonalny) |
-| `{n}` | Dokładnie `n` wystąpień                  |
-| `{n,}` | Co najmniej `n` wystąpień               |
-| `{n,m}` | Od `n` do `m` wystąpień                |
-| `[]` | Dowolny z określonych znaków             |
-| `\|`  | Alternatywa (lub)                        |
-| `()` | Grupa (do tworzenia podwyrażeń)          |
+| Znak    | Znaczenie                                                    |
+| ------- | ------------------------------------------------------------ |
+| `.`     | Dowolny znak (oprócz znaku nowej linii)                      |
+| `^`     | Początek linii                                               |
+| `$`     | Koniec linii                                                 |
+| `*`     | Zero lub więcej wystąpień poprzedniego znaku                 |
+| `+`     | Jedno lub więcej wystąpień poprzedniego znaku                |
+| `?`     | Zero lub jedno wystąpienie poprzedniego znaku _(opcjonalny)_ |
+| `{n}`   | Dokładnie `n` wystąpień                                      |
+| `{n,}`  | Co najmniej `n` wystąpień                                    |
+| `{n,m}` | Od `n` do `m` wystąpień                                      |
+| `[]`    | Dowolny z określonych znaków                                 |
+| `\|`    | Alternatywa _(lub) _                                         |
+| `()`    | Grupa _(do tworzenia podwyrażeń)_                            |
 
 ### Przykłady Podstawowych Wzorców
+
 - `a.b` - Dopasowuje `a`, dowolny znak i `b`, np. `acb`, `a3b`.
 - `^abc` - Dopasowuje `abc` tylko na początku linii.
 - `abc$` - Dopasowuje `abc` tylko na końcu linii.
@@ -30,30 +31,37 @@ Wyrażenia regularne (ang. *regular expressions* lub *regex*) to potężne narz�
 
 ## Klasy Znaków
 
-| Klasa      | Znaczenie                              |
-|------------|----------------------------------------|
-| `\d`      | Dowolna cyfra (0-9)                    |
-| `\D`      | Dowolny znak, który nie jest cyfrą     |
-| `\w`      | Dowolna litera, cyfra lub znak podkreślenia |
-| `\W`      | Dowolny znak, który nie jest literą, cyfrą lub znakiem podkreślenia |
-| `\s`      | Dowolny biały znak (spacja, tabulator, nowa linia) |
-| `\S`      | Dowolny znak, który nie jest białym znakiem |
-| `.`        | Dowolny znak (oprócz nowej linii)      |
+| Klasa   | Znaczenie                                                           |
+| ------- | ------------------------------------------------------------------- |
+| `[0-9]` | Dowolna cyfra _(0-9)_                                               |
+| `[a-z]` | Dowolna mała litera alfabetu _(od `a` do `z`)_                      |
+| `[A-Z]` | Dowolna wielka litera alfabetu _(od `A` do `Z`)_                    |
+| `\d`    | Dowolna cyfra _(0-9)_                                               |
+| `\D`    | Dowolny znak, który nie jest cyfrą                                  |
+| `\w`    | Dowolna litera, cyfra lub znak podkreślenia                         |
+| `\W`    | Dowolny znak, który nie jest literą, cyfrą lub znakiem podkreślenia |
+| `\s`    | Dowolny biały znak _(spacja, tabulator, nowa linia)_                |
+| `\S`    | Dowolny znak, który nie jest białym znakiem                         |
+| `.`     | Dowolny znak _(oprócz nowej linii)_                                 |
 
 ### Przykłady Klasy Znaków
-- `\d{3}` - Dopasowuje dokładnie trzy cyfry, np. `123`.
-- `\w+` - Dopasowuje ciąg liter, cyfr lub znaków podkreślenia, np. `abc123`.
+
+- `[a-z]{5}` - Dopasowuje ciąg pięciu małych liter, np. `abcde`.
+- `[A-Z]\d{2}` - Dopasowuje wielką literę, po której następują dwie cyfry, np. `A12`.
+- `[0-9a-zA-Z]+` - Dopasowuje ciąg dowolnych cyfr lub liter, np. `A1b2C3`.
+- `[a-zA-Z_]` - Dopasowuje dowolną literę (małą lub wielką) lub znak podkreślenia, np. `a`, `B`, `_`.
 
 ## Kotwice i Granice
 
-| Kotwica    | Znaczenie                              |
-|------------|----------------------------------------|
-| `^`        | Początek linii                         |
-| `$`        | Koniec linii                           |
-| `\b`      | Granica słowa                          |
-| `\B`      | Brak granicy słowa                     |
+| Kotwica | Znaczenie          |
+| ------- | ------------------ |
+| `^`     | Początek linii     |
+| `$`     | Koniec linii       |
+| `\b`    | Granica słowa      |
+| `\B`    | Brak granicy słowa |
 
 ### Przykłady Kotwic
+
 - `\bcat\b` - Dopasowuje `cat` jako całe słowo.
 - `^\d+` - Dopasowuje liczby na początku linii.
 
