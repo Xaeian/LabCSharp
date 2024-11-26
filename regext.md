@@ -95,7 +95,7 @@ Jeśli chcesz dopasować znak specjalny (np. `.` lub `*`), musisz poprzedzić go
 
 ---
 
-To są podstawy wyrażeń regularnych. Jeśli masz konkretne pytania lub potrzebujesz bardziej zaawansowanych przykładów, daj znać!
+## Zadania
 
 ### 0. Wyszukiwanie hashtagów i użytkowników
 
