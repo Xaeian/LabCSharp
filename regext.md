@@ -182,3 +182,13 @@ Kwiaty, książka, kamień, droga, lampa, piasek. Te wszystkie wyrazy mają dok�
 **Napisz wyrażenie regularne, które sprawdzi, czy hasło spełnia wymagania: przynajmniej 8 znaków, jedna duża litera, jedna cyfra oraz jeden znak specjalny _(np. `!`, `@`, `#`)_**
 
 Przykłady haseł: P@ssw0rd123!, Moje_Haslo!456, S3kr3t!, Bezpieczne#Haslo2024, Trudn3!Hasło_88, !S1lneHasl0, 1234Pass#Secure, #Mega$trong123, H@sło2025!, W1elki@H4cker. Wiele z tych haseł spełnia wymagania, ale niektóre mają braki: 'NieHasłoBezZnaków' (brak znaków specjalnych), 'Password123' (brak znaku specjalnego), 'Trudne-Haslo' (brak cyfr), 'P4ssword!' (brak dużej litery), '@hasloBezCyfry' (brak cyfry). Hasła takie jak 'silne#Haslo2024' spełniają większość wymogów, ale mogą być zbyt przewidywalne.
+
+```
+112.223.123.231
+262.223.123.231
+112.223.123.231
+ 112.223.262.231
+112-223.123.231
+112.223.123.231
+112.223.123.231.
+```
