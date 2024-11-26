@@ -97,6 +97,13 @@ Jeśli chcesz dopasować znak specjalny (np. `.` lub `*`), musisz poprzedzić go
 
 To są podstawy wyrażeń regularnych. Jeśli masz konkretne pytania lub potrzebujesz bardziej zaawansowanych przykładów, daj znać!
 
+### 0. Wyszukiwanie hashtagów i użytkowników
+
+**Znajdowanie wyrazów zaczynających się od `#` lub `@`**
+
+Popularne hashtagi na naszej platformie to: #programowanie, #Python3, #Nowosc2024, a także ogólne tematy takie jak #AI i #Nauka. Użytkownicy często używają oznaczeń, takich jak @AnnaNowak, @john123, @dev_team, oraz @PiotrW. Ważne jest, aby oznaczenia były poprawne – niektóre z błędnych przykładów to: @@double (zbyt wiele znaków '@'), # (sam znak bez żadnego wyrazu), @!user (znak specjalny po @), oraz @123#tag (nieprawidłowe znaki po @). Warto też zwrócić uwagę na oznaczenia w środku zdania, takie jak tekst@mention (brak spacji przed znakiem @), #Java@2024 (mieszanie # i @), czy @@admin (dwa znaki @).
+Podczas wyszukiwania hashtagów, musimy także ignorować przypadki, gdzie znaki @ lub # są częścią innych słów, np.: email@example.com (adres e-mail, a nie oznaczenie), C#language (nazwa języka), hasz#niepoprawny (znak # w środku wyrazu). Poprawne oznaczenia powinny znajdować się na początku i być poprawnie zbudowane, np.: #NowyProjekt, @Uzytkownik123, #WydarzenieRoku, @SuperTeam2024.
+Zwróć uwagę na więcej fałszywych przykładów: abc@john_doe (znak @ w środku wyrazu), #123start (hashtag zaczynający się od cyfry – akceptowalny tylko jako całość), tekst przed @mention, tekst#tag, znak przed #hashtag oraz dodatkowe znaki jak #!notValid, @!@, @use_r123, #12!. Poprawne hashtagi i oznaczenia użytkowników muszą spełniać wymagania dotyczące formatu, takie jak: #Valid_Tag, @correctUser, #2024Update, @Projekt123.
 
 ### 1. Dopasowanie poprawnych kodów pocztowych
 
