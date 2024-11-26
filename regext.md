@@ -98,61 +98,67 @@ Jeśli chcesz dopasować znak specjalny (np. `.` lub `*`), musisz poprzedzić go
 To są podstawy wyrażeń regularnych. Jeśli masz konkretne pytania lub potrzebujesz bardziej zaawansowanych przykładów, daj znać!
 
 
-#### 1. Dopasowanie poprawnych kodów pocztowych
+### 1. Dopasowanie poprawnych kodów pocztowych
 
 **Stwórz wyrażenie regularne, które dopasuje polskie kody pocztowe w formacie `00-000`**
 
 Nasze placówki znajdują się w miastach: Warszawa 00-001, Kraków 30-002, Wrocław 50-345, Łódź 90-234, Gdańsk 80-123, Poznań 61-800. Jednak błędne kody, które mogą wyglądać podobnie, to: 000-123 (zły format), 123456 (brak myślnika), kod typu '800123' (nieprawidłowa liczba cyfr), zbyt krótki kod '12-345', oraz nierealistyczny kod '50-ABC'. Kod '12-A34' także nie spełnia kryteriów polskich kodów pocztowych.
 
-#### 2. Wyszukaj wszystkie adresy e-mail
+### 2. Wyszukaj wszystkie adresy e-mail
 
 **Napisz wyrażenie regularne, które dopasowuje dowolny poprawny adres e-mail, zawierający przedział liter, cyfr, kropkę oraz znak @**
 
 Jeśli masz pytania dotyczące produktów, możesz skontaktować się z nami pod adresem kontakt@firma.pl. Nasze wsparcie techniczne odpowiada również na wiadomości wysłane na adres support@techcorp.com. Jeśli potrzebujesz porady, napisz na adres admin@serwer.edu.pl. Możesz także użyć alternatywnego formatu adresu: support(at)firma(dot)pl. Dla naszych partnerów biznesowych mamy specjalny adres partner@firma-partners.eu, a dla spraw marketingowych: marketing@firma-advert.com. Skontaktuj się z nami również na info@mojafirma.com lub office(at)naszafirma(dot)net. Ważne, abyś nie wysyłał maili na kontakt.com (to jest strona internetowa, nie adres e-mail). Wiele osób popełnia ten błąd pisząc coś@zła-nazwa@domena.com, co również nie jest poprawnym adresem. Pamiętaj także, że customer_service.com to portal obsługi, a nie e-mail.
 
-#### 3. Znalezienie numerów telefonów w formacie międzynarodowym
+### 3. Znalezienie numerów telefonów w formacie międzynarodowym
 
 **Utwórz wyrażenie regularne, które znajdzie wszystkie numery telefonów w formacie międzynarodowym, np. `+48 123-456-789` lub `+123 58 123-23-11`**
 
 Nasze biuro międzynarodowe można osiągnąć pod numerami: +48 123-456-789, +1 800-123-4567, +44 207-9876-5432, +91 22-3456-7890, +39 06-1234-5678 oraz +353 1 234-5678. Z kolei nasze biuro w Kanadzie odbiera połączenia pod numerem +1 647 123 4567. Błędne numery to: +99 1234-5678-900 (zbyt długa sekwencja), ++48 123456789 (podwójny plus), brakujące segmenty jak: +12-12-1234. Są także błędne numery takie jak +4820-555-1234 (zbyt dużo cyfr po kierunkowym), (bez plusa) 1 212-345-6789, oraz +12345-67890 (zbyt krótki kod kraju). Numery typu (123) 456-789 czy 123-456-789 nie są w międzynarodowym formacie.
 
-#### 4. Sprawdzenie formatu daty
+### 4. Sprawdzenie formatu daty
 
 **Napisz wyrażenie regularne, które sprawdzi, czy dana data jest w formacie `DD/MM/RRRR` lub `DD-MM-RRRR`**
 
 Planowane terminy wydarzeń to 15/08/2024, 30-11-2024, a także ważna data to 01/12/2025. Rejestracja jest możliwa do 25/12/2024. Przykłady pozornie poprawnych dat to: 15.08.2024, 30.11.2024 (brak wymaganych separatorów '/'). Wprowadzające w błąd mogą być także daty typu 5/5/24 (zbyt krótki format), 2024-05-05 (format ISO, a nie DD/MM/RRRR), 13/13/2024 (niepoprawny miesiąc), oraz 30-Feb-2025, gdzie luty nigdy nie ma 30 dni. Daty takie jak 00-00-0000 są również nieprawidłowe.
 
-#### 5. Wyszukaj wszystkie adresy IP
+### 5. Wyszukaj wszystkie adresy IP
 
 **Utwórz wyrażenie regularne, które dopasuje dowolny poprawny adres IPv4, np. `192.168.1.1`**
 
 Nasze serwery pracują pod adresami IP: 192.168.1.1, 10.0.0.2, 203.0.113.5, a także zewnętrzny serwer 198.51.100.20. Przykłady błędnych adresów IP to: 192.168.300.1 (liczby poza zakresem), 256.256.256.256, adres z brakującym segmentem jak 192.168.1., za dużo segmentów: 10.0.0.1.5, oraz mieszany format: 10:0:0:1. Adresy IPv6 takie jak fe80::1 nie pasują do wzorca IPv4. Przykłady z błędnymi separatorami: 10-0-0-1 również nie spełniają wymogów.
 
-#### 6. Znalezienie słów zaczynających się na "A"
+**Napisz wyrażenie regularne, które znajdzie wszystkie poprawne adresy IPv6  np. `2001:4860:4860::8888`**
+
+Nasza infrastruktura sieciowa obsługuje wiele różnych adresów IP. Przykłady prawidłowych adresów IPv6 to: 2001:0db8:85a3:0000:0000:8a2e:0370:7334, 2001:db8:85a3::8a2e:370:7334 (skrócony zapis), oraz fe80::1ff:fe23:4567:890a (adres lokalny). Adresy takie jak ::1 (pętla zwrotna) również są poprawne.
+Niektóre przykłady błędnych adresów to: 12345:db8:85a3::8a2e (zbyt długa grupa), fe80:::1 (zbyt wiele dwukropków), 2001::85a3::8a2e (więcej niż jeden podwójny dwukropek), oraz 2001:db8:85a3:8a2e:370 (zbyt mało grup). Adresy IPv6 mogą także zawierać liczby w zakresie od 0 do f, ale przykłady takie jak 2001:db8:85a3:zzzz:0000:8a2e:0370:7334 (niewłaściwy znak 'z') nie są akceptowalne.
+Dodatkowo, niektóre fałszywe adresy IPv4 są mylone z IPv6: 192.168.1.1, 10.0.0.255, a także mieszane formaty, np. 2001:db8::123.456.789.012 (niepoprawny segment IPv4). Ważne jest, aby zignorować też takie sekwencje jak 'IPv6_address: 2001:db8::85a3' (poprzedzone tekstem) oraz adres: fe80:: (niepełny adres). Prawidłowe adresy IPv6 mogą mieć różne długości, na przykład: 1234:5678:9abc:def0:1234:5678:9abc:def0, ::ffff:192.168.1.1 (kompatybilny z IPv4), oraz 2001:db8::1:0:0:1.
+
+### 6. Znalezienie słów zaczynających się na "A"
 
 **Stwórz wyrażenie regularne, które znajdzie wszystkie słowa rozpoczynające się na literę "A" _(bez względu na wielkość litery)_**
 
 Adam, Ania oraz Artur odwiedzili Amfiteatr w Atenach. Andrzej także dołączył, by cieszyć się atmosferą artystycznych występów. Warto zauważyć słowa takie jak: 'atencja', 'androgyniczny', które pozornie zaczynają się na A, ale mają inne znaczenie. Słowa takie jak 'oaza', 'awanse', 'ekspansja' nie spełniają kryteriów, ponieważ nie zaczynają się na tę literę. Również 'agencja' może wydawać się odpowiednie, ale nie pasuje do wzorca.
 
-#### 7. Wyszukaj tylko wyrazy złożone z cyfr
+### 7. Wyszukaj tylko wyrazy złożone z cyfr
 
 **Napisz wyrażenie regularne, które dopasuje wyłącznie wyrazy składające się z samych cyfr, bez znaków specjalnych i liter**
 
 "Podane numery to: 123456789, 987654321, 456789012, 123123123, 456456456, 789789789. Numery takie jak 'ABC123' lub '123-456' zawierają inne znaki i nie pasują do wzorca. Podobnie 'num_12345', '1234xyz', czy '#123456' zawierają dodatkowe litery lub znaki specjalne. Numery typu '001 122', które zawierają spacje, także są niepoprawne."
 
-#### 8. Dopasowanie wyrazów o określonej długości
+### 8. Dopasowanie wyrazów o określonej długości
 
 **Utwórz wyrażenie regularne, które znajdzie wyrazy mające dokładnie 5 liter, niezależnie od rodzaju liter _(małe/wielkie)_**
 
 Kwiaty, książka, kamień, droga, lampa, piasek. Te wszystkie wyrazy mają dokładnie pięć liter. Jednak słowa takie jak 'krzesło' (7 liter), 'światło' (7 liter), 'okienko' (8 liter) nie spełniają wymogów. Słowa typu 'most' (4 litery) lub 'morze' (5 liter, ale inne znaczenie) również nie są odpowiednie. Tylko dokładnie pięcioliterowe słowa spełniają wymagania."
 
-#### 9. Wyszukiwanie tagów HTML
+### 9. Wyszukiwanie tagów HTML
 
 **Stwórz wyrażenie regularne, które znajdzie wszystkie otwierające i zamykające tagi HTML, np. `<div>` oraz `</div>`**
 
       W dokumencie HTML znajdziesz elementy takie jak: <html>, <head>, <title>Tytuł strony</title>, <body>, <div class='content'>Treść główna</div>, <h1>Nagłówek 1</h1>, <p>To jest paragraf tekstu</p>, <a href='link.html'>Link</a>, <span>Kolejny element</span>, <footer>Stopka</footer>. Przykłady błędnych tagów to: <img /src='image.png'> (błędny zapis), <span <p> (niepoprawna struktura), brak zamykającego tagu <div class='open', oraz dodatkowe znaki w tagu <footer/>. Tylko poprawne, kompletne struktury HTML będą pasować do wyrażenia.
 
-#### 10. Walidacja hasła
+### 10. Walidacja hasła
 
 **Napisz wyrażenie regularne, które sprawdzi, czy hasło spełnia wymagania: przynajmniej 8 znaków, jedna duża litera, jedna cyfra oraz jeden znak specjalny _(np. `!`, `@`, `#`)_**
 
