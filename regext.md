@@ -34,9 +34,6 @@ Wyrażenia regularne (ang. *regular expressions* lub *regex*) to potężne narz�
 
 | Klasa   | Znaczenie                                                           |
 | ------- | ------------------------------------------------------------------- |
-| `[0-9]` | Dowolna cyfra _(0-9)_                                               |
-| `[a-z]` | Dowolna mała litera alfabetu _(od `a` do `z`)_                      |
-| `[A-Z]` | Dowolna wielka litera alfabetu _(od `A` do `Z`)_                    |
 | `\d`    | Dowolna cyfra _(0-9)_                                               |
 | `\D`    | Dowolny znak, który nie jest cyfrą                                  |
 | `\w`    | Dowolna litera, cyfra lub znak podkreślenia                         |
@@ -44,6 +41,9 @@ Wyrażenia regularne (ang. *regular expressions* lub *regex*) to potężne narz�
 | `\s`    | Dowolny biały znak _(spacja, tabulator, nowa linia)_                |
 | `\S`    | Dowolny znak, który nie jest białym znakiem                         |
 | `.`     | Dowolny znak _(oprócz nowej linii)_                                 |
+| `[0-9]` | Zakres liczb                                                        |
+| `[a-z]` | Zakres małych liter                                                 |
+| `[A-Z]` | Zakres dużych liter                                                 |
 
 ### Przykłady Klasy Znaków
 
@@ -51,6 +51,7 @@ Wyrażenia regularne (ang. *regular expressions* lub *regex*) to potężne narz�
 - `[A-Z]\d{2}` - Dopasowuje wielką literę, po której następują dwie cyfry, np. `A12`.
 - `[0-9a-zA-Z]+` - Dopasowuje ciąg dowolnych cyfr lub liter, np. `A1b2C3`.
 - `[a-zA-Z_]` - Dopasowuje dowolną literę (małą lub wielką) lub znak podkreślenia, np. `a`, `B`, `_`.
+- `[^%]` - Wszystkie znaki poza znakiem procenta `%`
 
 ## Kotwice i Granice
 
