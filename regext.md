@@ -102,6 +102,8 @@ Jeśli chcesz dopasować znak specjalny (np. `.` lub `*`), musisz poprzedzić go
 - **Testowanie**: Przetestuj swoje wyrażenia regularne na przykładach, aby upewnić się, że działają zgodnie z oczekiwaniami.
 - **Unikaj nadmiernego dopasowywania**: Regex może czasem dopasować więcej niż oczekiwano. Sprawdzaj, czy nie wychodzi poza pożądany zakres.
 
+Spoko kurs: [regexone.com](https://regexone.com/)
+
 ---
 
 ## Zadania
