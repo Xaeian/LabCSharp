@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mHKAMevQxYA=",
+  "dgSpecHash": "U/g7Mmsq/AI=",
   "success": true,
-  "projectFilePath": "D:\\DiskC\\Labs\\CSharp\\project\\database.csproj",
+  "projectFilePath": "C:\\Users\\Emilian\\Desktop\\LabCSharp\\project\\database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emilian\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Emilian\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

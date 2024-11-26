@@ -910,11 +910,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DiskC\\Labs\\CSharp\\project\\database.csproj",
+      "projectUniqueName": "C:\\Users\\Emilian\\Desktop\\LabCSharp\\project\\database.csproj",
       "projectName": "database",
-      "projectPath": "D:\\DiskC\\Labs\\CSharp\\project\\database.csproj",
+      "projectPath": "C:\\Users\\Emilian\\Desktop\\LabCSharp\\project\\database.csproj",
       "packagesPath": "C:\\Users\\Emilian\\.nuget\\packages\\",
-      "outputPath": "D:\\DiskC\\Labs\\CSharp\\project\\obj\\",
+      "outputPath": "C:\\Users\\Emilian\\Desktop\\LabCSharp\\project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emilian\\AppData\\Roaming\\NuGet\\NuGet.Config"
