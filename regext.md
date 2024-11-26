@@ -8,9 +8,9 @@ Wyrażenia regularne (ang. *regular expressions* lub *regex*) to potężne narz�
 
 | Znak    | Znaczenie                                                    |
 | ------- | ------------------------------------------------------------ |
-| `.`     | Dowolny znak (oprócz znaku nowej linii)                      |
-| `^`     | Początek linii                                               |
-| `$`     | Koniec linii                                                 |
+| `.`     | Dowolny znak _(oprócz znaku nowej linii)_                    |
+| `^`     | Początek frazy                                               |
+| `$`     | Koniec frazy                                                 |
 | `*`     | Zero lub więcej wystąpień poprzedniego znaku                 |
 | `+`     | Jedno lub więcej wystąpień poprzedniego znaku                |
 | `?`     | Zero lub jedno wystąpienie poprzedniego znaku _(opcjonalny)_ |
